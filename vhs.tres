@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cuxpu1y012fpk"]
+
+[ext_resource type="Shader" uid="uid://cy7axr3rsndhb" path="res://vhs.gdshader" id="1_qa6bk"]
+
+[resource]
+shader = ExtResource("1_qa6bk")
+shader_parameter/wave_speed = 0.3
+shader_parameter/color_shift = 0.003

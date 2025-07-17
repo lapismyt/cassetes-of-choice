@@ -1,0 +1,777 @@
+[gd_scene load_steps=31 format=4 uid="uid://b7x7rmgwk0hyl"]
+
+[ext_resource type="Texture2D" uid="uid://6lwgwm10fiyw" path="res://models/elevator_buttons_0.png" id="1_on6ub"]
+[ext_resource type="Script" uid="uid://bsxturfe8os2a" path="res://levels/scene_elevator/elevator_button_interact.gd" id="2_on6ub"]
+[ext_resource type="Script" uid="uid://ctp840jxv1o6" path="res://base/scripts/interactable.gd" id="3_wvnw0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nix0"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_on6ub")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_21735"]
+_surfaces = [{
+"aabb": AABB(-0.375, 0, -0.0625, 0.625, 0.875, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bqwmi"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.375, 0, -0.0625, 0.625, 0.875, 0.125),
+"attribute_data": PackedByteArray("HwAfEN8PHxAfAN9/3w/ffx9gHxDfbx8QH2Dff99v33/fX98PHxDfD99fHwAfEB8A368fAB9gHwDfr98PH2DfDx9wHxDfvx8QH3Dff9+/338fEB8Q318fEB8Q33/fX99/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_21735")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n62a0"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u3cb1"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("HwAfmN8PH5gfAN+n3w/fpx8gH5jfLx+YHyDfp98v36ffH9+XHxDfl98fH4gfEB+I3y8fiB8gH4jfL9+XHyDflx8wH5jfPx+YHzDfp98/36cfEB+Y3x8fmB8Q36ffH9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n62a0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2m6yg"]
+size = Vector3(0.0115784, 0.0112381, 0.011377)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ii0yx"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k7tek"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("HwAfmN8PH5gfAN+n3w/fpx8gH5jfLx+YHyDfp98v36ffH9+XHxDfl98fH4gfEB+I3y8fiB8gH4jfL9+XHyDflx8wH5jfPx+YHzDfp98/36cfEB+Y3x8fmB8Q36ffH9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ii0yx")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pjv31"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xq1x3"]
+resource_name = "blockbench_export_mesh4"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("HwAfmN8PH5gfAN+n3w/fpx8gH5jfLx+YHyDfp98v36ffH9+XHxDfl98fH4gfEB+I3y8fiB8gH4jfL9+XHyDflx8wH5jfPx+YHzDfp98/36cfEB+Y3x8fmB8Q36ffH9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pjv31")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r4x5l"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_acyi5"]
+resource_name = "blockbench_export_mesh5"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("H5AfmN+fH5gfkN+n35/fpx+wH5jfvx+YH7Dfp9+/36ffr9+XH6Dfl9+vH4gfoB+I378fiB+wH4jfv9+XH7Dflx/AH5jfzx+YH8Dfp9/P36cfoB+Y368fmB+g36ffr9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r4x5l")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uril0"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7yved"]
+resource_name = "blockbench_export_mesh6"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("HwAfmN8PH5gfAN+n3w/fpx8gH5jfLx+YHyDfp98v36ffH9+XHxDfl98fH4gfEB+I3y8fiB8gH4jfL9+XHyDflx8wH5jfPx+YHzDfp98/36cfEB+Y3x8fmB8Q36ffH9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uril0")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0hhha"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_et2x1"]
+resource_name = "blockbench_export_mesh7"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("HwAfmN8PH5gfAN+n3w/fpx8gH5jfLx+YHyDfp98v36ffH9+XHxDfl98fH4gfEB+I3y8fiB8gH4jfL9+XHyDflx8wH5jfPx+YHzDfp98/36cfEB+Y3x8fmB8Q36ffH9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0hhha")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j4lnk"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1tqsd"]
+resource_name = "blockbench_export_mesh8"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.0625, 0.125, 0.125, 0.125),
+"attribute_data": PackedByteArray("H0gfmN9XH5gfSN+n31ffpx9oH5jfdx+YH2jfp99336ffZ9+XH1jfl99nH4gfWB+I33cfiB9oH4jfd9+XH2jflx94H5jfhx+YH3jfp9+H36cfWB+Y32cfmB9Y36ffZ9+n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_0nix0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_j4lnk")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_on6ub"]
+size = Vector3(0.6, 0.889978, 0.136603)
+
+[sub_resource type="Animation" id="Animation_lddui"]
+resource_name = "button_0"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_0")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0, 0.0333333, 1, 0.125, 0.75, 0.00913823, 0.0666667, 1, 0.125, 0.75, 0.0214399, 0.1, 1, 0.125, 0.75, 0.0347969, 0.133333, 1, 0.125, 0.75, 0.0471004, 0.166667, 1, 0.125, 0.75, 0.0562409, 0.233333, 1, 0.125, 0.75, 0.0575482, 0.3, 1, 0.125, 0.75, 0.0565614, 0.433333, 1, 0.125, 0.75, 0.0615634, 0.466667, 1, 0.125, 0.75, 0.0626757, 0.5, 1, 0.125, 0.75, 0.0633755, 0.566667, 1, 0.125, 0.75, 0.0656493, 0.633333, 1, 0.125, 0.75, 0.0668296, 0.666667, 1, 0.125, 0.75, 0.0672375, 0.733333, 1, 0.125, 0.75, 0.0634475, 0.766667, 1, 0.125, 0.75, 0.0587963, 0.833333, 1, 0.125, 0.75, 0.0439815, 0.9, 1, 0.125, 0.75, 0.0236111, 0.933333, 1, 0.125, 0.75, 0.0148148, 1, 1, 0.125, 0.75, 0, 1.06667, 1, 0.125, 0.75, -0.00370371, 1.13333, 1, 0.125, 0.75, -0.00358796, 1.2, 1, 0.125, 0.75, -0.00104167, 1.25, 1, 0.125, 0.75, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_1")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_5")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_6")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+
+[sub_resource type="Animation" id="Animation_wbqb0"]
+resource_name = "button_1"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_1")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0, 0.0333333, 1, 0.125, 0.5625, 0.00913823, 0.0666667, 1, 0.125, 0.5625, 0.0214399, 0.1, 1, 0.125, 0.5625, 0.0347969, 0.133333, 1, 0.125, 0.5625, 0.0471004, 0.166667, 1, 0.125, 0.5625, 0.0562409, 0.233333, 1, 0.125, 0.5625, 0.0575482, 0.3, 1, 0.125, 0.5625, 0.0565614, 0.433333, 1, 0.125, 0.5625, 0.0615634, 0.466667, 1, 0.125, 0.5625, 0.0626757, 0.5, 1, 0.125, 0.5625, 0.0633755, 0.566667, 1, 0.125, 0.5625, 0.0656493, 0.633333, 1, 0.125, 0.5625, 0.0668296, 0.666667, 1, 0.125, 0.5625, 0.0672375, 0.733333, 1, 0.125, 0.5625, 0.0634475, 0.766667, 1, 0.125, 0.5625, 0.0587963, 0.833333, 1, 0.125, 0.5625, 0.0439815, 0.9, 1, 0.125, 0.5625, 0.0236111, 0.933333, 1, 0.125, 0.5625, 0.0148148, 1, 1, 0.125, 0.5625, 0, 1.06667, 1, 0.125, 0.5625, -0.00370371, 1.13333, 1, 0.125, 0.5625, -0.00358796, 1.2, 1, 0.125, 0.5625, -0.00104167, 1.25, 1, 0.125, 0.5625, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_5")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_6")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+
+[sub_resource type="Animation" id="Animation_781bx"]
+resource_name = "button_2"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0, 0.0333333, 1, -0.25, 0.5625, 0.00913823, 0.0666667, 1, -0.25, 0.5625, 0.0214399, 0.1, 1, -0.25, 0.5625, 0.0347969, 0.133333, 1, -0.25, 0.5625, 0.0471004, 0.166667, 1, -0.25, 0.5625, 0.0562409, 0.233333, 1, -0.25, 0.5625, 0.0575482, 0.3, 1, -0.25, 0.5625, 0.0565614, 0.433333, 1, -0.25, 0.5625, 0.0615634, 0.466667, 1, -0.25, 0.5625, 0.0626757, 0.5, 1, -0.25, 0.5625, 0.0633755, 0.566667, 1, -0.25, 0.5625, 0.0656493, 0.633333, 1, -0.25, 0.5625, 0.0668296, 0.666667, 1, -0.25, 0.5625, 0.0672375, 0.733333, 1, -0.25, 0.5625, 0.0634475, 0.766667, 1, -0.25, 0.5625, 0.0587963, 0.833333, 1, -0.25, 0.5625, 0.0439815, 0.9, 1, -0.25, 0.5625, 0.0236111, 0.933333, 1, -0.25, 0.5625, 0.0148148, 1, 1, -0.25, 0.5625, 0, 1.06667, 1, -0.25, 0.5625, -0.00370371, 1.13333, 1, -0.25, 0.5625, -0.00358796, 1.2, 1, -0.25, 0.5625, -0.00104167, 1.25, 1, -0.25, 0.5625, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_5")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_6")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+
+[sub_resource type="Animation" id="Animation_tnw4s"]
+resource_name = "button_3"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0, 0.0333333, 1, -0.25, 0.75, 0.00913823, 0.0666667, 1, -0.25, 0.75, 0.0214399, 0.1, 1, -0.25, 0.75, 0.0347969, 0.133333, 1, -0.25, 0.75, 0.0471004, 0.166667, 1, -0.25, 0.75, 0.0562409, 0.233333, 1, -0.25, 0.75, 0.0575482, 0.3, 1, -0.25, 0.75, 0.0565614, 0.433333, 1, -0.25, 0.75, 0.0615634, 0.466667, 1, -0.25, 0.75, 0.0626757, 0.5, 1, -0.25, 0.75, 0.0633755, 0.566667, 1, -0.25, 0.75, 0.0656493, 0.633333, 1, -0.25, 0.75, 0.0668296, 0.666667, 1, -0.25, 0.75, 0.0672375, 0.733333, 1, -0.25, 0.75, 0.0634475, 0.766667, 1, -0.25, 0.75, 0.0587963, 0.833333, 1, -0.25, 0.75, 0.0439815, 0.9, 1, -0.25, 0.75, 0.0236111, 0.933333, 1, -0.25, 0.75, 0.0148148, 1, 1, -0.25, 0.75, 0, 1.06667, 1, -0.25, 0.75, -0.00370371, 1.13333, 1, -0.25, 0.75, -0.00358796, 1.2, 1, -0.25, 0.75, -0.00104167, 1.25, 1, -0.25, 0.75, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_5")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_6")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+
+[sub_resource type="Animation" id="Animation_bfng3"]
+resource_name = "button_4"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_4")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0, 0.0333333, 1, 0.125, 0.375, 0.00913823, 0.0666667, 1, 0.125, 0.375, 0.0214399, 0.1, 1, 0.125, 0.375, 0.0347969, 0.133333, 1, 0.125, 0.375, 0.0471004, 0.166667, 1, 0.125, 0.375, 0.0562409, 0.233333, 1, 0.125, 0.375, 0.0575482, 0.3, 1, 0.125, 0.375, 0.0565614, 0.433333, 1, 0.125, 0.375, 0.0615634, 0.466667, 1, 0.125, 0.375, 0.0626757, 0.5, 1, 0.125, 0.375, 0.0633755, 0.566667, 1, 0.125, 0.375, 0.0656493, 0.633333, 1, 0.125, 0.375, 0.0668296, 0.666667, 1, 0.125, 0.375, 0.0672375, 0.733333, 1, 0.125, 0.375, 0.0634475, 0.766667, 1, 0.125, 0.375, 0.0587963, 0.833333, 1, 0.125, 0.375, 0.0439815, 0.9, 1, 0.125, 0.375, 0.0236111, 0.933333, 1, 0.125, 0.375, 0.0148148, 1, 1, 0.125, 0.375, 0, 1.06667, 1, 0.125, 0.375, -0.00370371, 1.13333, 1, 0.125, 0.375, -0.00358796, 1.2, 1, 0.125, 0.375, -0.00104167, 1.25, 1, 0.125, 0.375, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_5")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_6")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+
+[sub_resource type="Animation" id="Animation_1m72q"]
+resource_name = "button_5"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_5")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0, 0.0333333, 1, -0.0625, 0.375, 0.00913823, 0.0666667, 1, -0.0625, 0.375, 0.0214399, 0.1, 1, -0.0625, 0.375, 0.0347969, 0.133333, 1, -0.0625, 0.375, 0.0471004, 0.166667, 1, -0.0625, 0.375, 0.0562409, 0.233333, 1, -0.0625, 0.375, 0.0575482, 0.3, 1, -0.0625, 0.375, 0.0565614, 0.433333, 1, -0.0625, 0.375, 0.0615634, 0.466667, 1, -0.0625, 0.375, 0.0626757, 0.5, 1, -0.0625, 0.375, 0.0633755, 0.566667, 1, -0.0625, 0.375, 0.0656493, 0.633333, 1, -0.0625, 0.375, 0.0668296, 0.666667, 1, -0.0625, 0.375, 0.0672375, 0.733333, 1, -0.0625, 0.375, 0.0634475, 0.766667, 1, -0.0625, 0.375, 0.0587963, 0.833333, 1, -0.0625, 0.375, 0.0439815, 0.9, 1, -0.0625, 0.375, 0.0236111, 0.933333, 1, -0.0625, 0.375, 0.0148148, 1, 1, -0.0625, 0.375, 0, 1.06667, 1, -0.0625, 0.375, -0.00370371, 1.13333, 1, -0.0625, 0.375, -0.00358796, 1.2, 1, -0.0625, 0.375, -0.00104167, 1.25, 1, -0.0625, 0.375, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_4")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_6")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+
+[sub_resource type="Animation" id="Animation_triok"]
+resource_name = "button_6"
+length = 1.25
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/elevator_buttons/button_6")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0, 0.0333333, 1, 0.125, 0.1875, 0.00913823, 0.0666667, 1, 0.125, 0.1875, 0.0214399, 0.1, 1, 0.125, 0.1875, 0.0347969, 0.133333, 1, 0.125, 0.1875, 0.0471004, 0.166667, 1, 0.125, 0.1875, 0.0562409, 0.233333, 1, 0.125, 0.1875, 0.0575482, 0.3, 1, 0.125, 0.1875, 0.0565614, 0.433333, 1, 0.125, 0.1875, 0.0615634, 0.466667, 1, 0.125, 0.1875, 0.0626757, 0.5, 1, 0.125, 0.1875, 0.0633755, 0.566667, 1, 0.125, 0.1875, 0.0656493, 0.633333, 1, 0.125, 0.1875, 0.0668296, 0.666667, 1, 0.125, 0.1875, 0.0672375, 0.733333, 1, 0.125, 0.1875, 0.0634475, 0.766667, 1, 0.125, 0.1875, 0.0587963, 0.833333, 1, 0.125, 0.1875, 0.0439815, 0.9, 1, 0.125, 0.1875, 0.0236111, 0.933333, 1, 0.125, 0.1875, 0.0148148, 1, 1, 0.125, 0.1875, 0, 1.06667, 1, 0.125, 0.1875, -0.00370371, 1.13333, 1, 0.125, 0.1875, -0.00358796, 1.2, 1, 0.125, 0.1875, -0.00104167, 1.25, 1, 0.125, 0.1875, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/elevator_buttons/button_1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/elevator_buttons/button_2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/elevator_buttons/button_3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/elevator_buttons/button_4")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/elevator_buttons/button_5")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c87fy"]
+_data = {
+&"button_0": SubResource("Animation_lddui"),
+&"button_1": SubResource("Animation_wbqb0"),
+&"button_2": SubResource("Animation_781bx"),
+&"button_3": SubResource("Animation_tnw4s"),
+&"button_4": SubResource("Animation_bfng3"),
+&"button_5": SubResource("Animation_1m72q"),
+&"button_6": SubResource("Animation_triok")
+}
+
+[node name="elevator_btns" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Node" type="Node3D" parent="."]
+
+[node name="elevator_buttons" type="StaticBody3D" parent="Node"]
+
+[node name="cube" type="MeshInstance3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0625)
+mesh = SubResource("ArrayMesh_bqwmi")
+skeleton = NodePath("")
+
+[node name="button_0" type="Area3D" parent="Node/elevator_buttons" node_paths=PackedStringArray("animation_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
+script = ExtResource("2_on6ub")
+animation_player = NodePath("../../../AnimationPlayer")
+animation_name = "button_0"
+
+[node name="button_0_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
+mesh = SubResource("ArrayMesh_u3cb1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_0"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="button_1" type="Area3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.5625, 0)
+script = ExtResource("3_wvnw0")
+
+[node name="button_1_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 3.47727e-09)
+mesh = SubResource("ArrayMesh_k7tek")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_1"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="button_2" type="Area3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5625, 0)
+script = ExtResource("3_wvnw0")
+
+[node name="button_2_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
+mesh = SubResource("ArrayMesh_xq1x3")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_2"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="button_3" type="Area3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.75, 0)
+script = ExtResource("3_wvnw0")
+
+[node name="button_3_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
+mesh = SubResource("ArrayMesh_acyi5")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_3"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="button_4" type="Area3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.375, 0)
+script = ExtResource("3_wvnw0")
+
+[node name="button_4_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
+mesh = SubResource("ArrayMesh_7yved")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_4"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="button_5" type="Area3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, 0.375, 0)
+script = ExtResource("3_wvnw0")
+
+[node name="button_5_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
+mesh = SubResource("ArrayMesh_et2x1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_5"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="button_6" type="Area3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.1875, 0)
+script = ExtResource("3_wvnw0")
+
+[node name="button_6_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
+mesh = SubResource("ArrayMesh_1tqsd")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons/button_6"]
+transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
+shape = SubResource("BoxShape3D_2m6yg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.444989, 0.0646333)
+shape = SubResource("BoxShape3D_on6ub")
+
+[node name="ElevatorSoundPlayer" type="AudioStreamPlayer3D" parent="Node/elevator_buttons"]
+unique_name_in_owner = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_c87fy")
+}

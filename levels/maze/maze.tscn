@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgih1ws6an5ur"]
+
+[ext_resource type="Script" uid="uid://bmbw8h8uhgu1f" path="res://levels/scene_elevator/maze.gd" id="1_3nb0a"]
+
+[node name="Maze" type="Node3D"]
+script = ExtResource("1_3nb0a")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0655425, 0.99785, 0, -0.99785, 0.0655425, 0, 8.47101, 0)

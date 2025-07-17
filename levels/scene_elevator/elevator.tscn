@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://dj488rjfy17jt"]
+
+[ext_resource type="PackedScene" uid="uid://cycggbcll3ur1" path="res://base/player.tscn" id="1_1s7mg"]
+[ext_resource type="Material" uid="uid://cuxpu1y012fpk" path="res://vhs.tres" id="3_sdm6y"]
+[ext_resource type="PackedScene" uid="uid://bdfdphueco6mt" path="res://levels/scene_elevator/elevator_model.tscn" id="4_pfpvq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_iyo7h"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_iyo7h"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_5s0of"]
+region_merge_size = 31.05
+
+[node name="Node3D" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024538, 4.07092, 0)
+light_color = Color(1, 0.998667, 0.92, 1)
+light_volumetric_fog_energy = 7.465
+light_size = 1.0
+light_bake_mode = 1
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 19.3169
+
+[node name="Player" parent="." instance=ExtResource("1_1s7mg")]
+
+[node name="floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_mask = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, -0.137695, 0.274658, 0.730469)
+mesh = SubResource("BoxMesh_iyo7h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_iyo7h")
+debug_color = Color(0, 0.6, 0.701961, 0.14902)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_5s0of")
+navigation_layers = 7
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = ExtResource("3_sdm6y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.548265, 0.1193, 0.480669, 1)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(24, 0, 0, 0, 24, 0, 0, 0, 24, 0, 0, 0)
+wind_force_magnitude = 0.476
+
+[node name="elevator_model" parent="." instance=ExtResource("4_pfpvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.226868, 0)
