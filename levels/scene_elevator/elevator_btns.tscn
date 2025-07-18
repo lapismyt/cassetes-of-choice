@@ -673,7 +673,7 @@ skeleton = NodePath("")
 [node name="button_0" type="Area3D" parent="Node/elevator_buttons" node_paths=PackedStringArray("animation_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
 script = ExtResource("2_on6ub")
-animation_player = NodePath("../../../AnimationPlayer")
+animation_player = NodePath("../../../ElevatorBtnAnimator")
 animation_name = "button_0"
 
 [node name="button_0_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_0"]
@@ -769,8 +769,9 @@ shape = SubResource("BoxShape3D_on6ub")
 
 [node name="ElevatorSoundPlayer" type="AudioStreamPlayer3D" parent="Node/elevator_buttons"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0535794, 0.476662, -0.0839194)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="ElevatorBtnAnimator" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_c87fy")

@@ -11,7 +11,7 @@
 [sub_resource type="NavigationMesh" id="NavigationMesh_5s0of"]
 region_merge_size = 31.05
 
-[node name="Node3D" type="Node3D"]
+[node name="ElevatorScene" type="Node3D"]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024538, 4.07092, 0)
@@ -50,10 +50,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.548265, 0.1193, 0.480669, 1)
-
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(24, 0, 0, 0, 24, 0, 0, 0, 24, 0, 0, 0)
-wind_force_magnitude = 0.476
 
 [node name="elevator_model" parent="." instance=ExtResource("4_pfpvq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.226868, 0)

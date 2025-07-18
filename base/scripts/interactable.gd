@@ -10,6 +10,8 @@ signal hovered()
 @export var mesh_instance: MeshInstance3D = null
 var original_material: Material = null
 @export var hovered_material: Material = null
+@export var interact_cooldown: float = 0.8
+var since_last_interaction: float = -1
 var is_hovered: bool = false
 var is_ready: bool = false
 
@@ -94,14 +96,22 @@ func update_hovering() -> void:
 func _physics_process(delta: float) -> void:
 	if is_ready:
 		update_hovering()
+	if since_last_interaction > interact_cooldown:
+		return
+	if since_last_interaction < 0:
+		since_last_interaction = delta
+	since_last_interaction += delta
+	#print_debug("since last interaction: ", since_last_interaction)
 
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton \
 			and event.button_index == MOUSE_BUTTON_LEFT \
 			and event.pressed:
-		if is_hovered:
+		if is_hovered and (since_last_interaction < 0 or since_last_interaction > interact_cooldown):
+			since_last_interaction = 0
 			interacted.emit()
+			print_debug("interacted")
 
 
 func _start_hover() -> void:
