@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://blslomrublnlo"]
+[gd_scene load_steps=3 format=3 uid="uid://blslomrublnlo"]
 
 [ext_resource type="Script" uid="uid://dsd4jdpcvkn6h" path="res://base/scripts/pause_menu.gd" id="1_vc53b"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_vc53b"]
+font_size = 66
+
 [node name="PauseMenu" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,14 +15,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vc53b")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 471.0
-offset_top = 276.0
-offset_right = 683.0
-offset_bottom = 376.0
-theme_override_font_sizes/font_size = 67
-text = "Назад"
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -96.0
+offset_right = 124.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 65
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Paused"
+label_settings = SubResource("LabelSettings_vc53b")
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 62
+text = "Resume"
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 62
+text = "Quit"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

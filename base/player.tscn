@@ -25,11 +25,11 @@ func _ready():
 	normal_speed = speed  # Инициализируем нормальную скорость
 
 func _input(event):
-	if event.is_action_pressed(\"ui_cancel\"):
-		get_tree().paused = not get_tree().paused
-		var pause_menu: Control = $PauseMenu
-		if pause_menu != null:
-			$PauseMenu.visible = not $PauseMenu.visible
+	#if event.is_action_pressed(\"ui_cancel\"):
+		#get_tree().paused = not get_tree().paused
+		#var pause_menu: Control = $PauseMenu
+		#if pause_menu != null:
+			#$PauseMenu.visible = not $PauseMenu.visible
 
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)

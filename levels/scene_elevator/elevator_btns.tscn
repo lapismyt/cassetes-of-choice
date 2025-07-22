@@ -757,7 +757,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_6" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.1875, 0)
 script = ExtResource("3_wvnw0")
-interaction_cooldown = 2.0
+interaction_cooldown = 1.5
 
 [node name="button_6_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)

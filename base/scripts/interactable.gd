@@ -44,10 +44,8 @@ func _load_mesh_instance() -> void:
 
 func _load_materials() -> void:
 	if mesh_instance:
-		# Сохраняем оригинальный материал
 		original_material = mesh_instance.mesh.surface_get_material(0)
 		
-		# Создаем материал для наведения
 		if hovered_material == null:
 			hovered_material = original_material.duplicate()
 			var outline = preload("res://outline.tres")
@@ -59,7 +57,6 @@ func handle_hover_start() -> void:
 	if is_hovered: return
 	is_hovered = true
 	
-	# Применяем материал для наведения
 	if mesh_instance and hovered_material:
 		mesh_instance.mesh.surface_set_material(0, hovered_material)
 	
@@ -70,7 +67,6 @@ func handle_hover_end() -> void:
 	if not is_hovered: return
 	is_hovered = false
 	
-	# Возвращаем оригинальный материал
 	if mesh_instance and original_material:
 		mesh_instance.mesh.surface_set_material(0, original_material)
 	
@@ -81,7 +77,6 @@ func handle_interaction() -> void:
 	since_last_interaction = 0
 	SignalBus.emit_signal("interaction_started", self)
 	
-	# Вызываем обработчик взаимодействия
 	if has_method("on_interaction"):
 		call("on_interaction")
 

@@ -10,7 +10,6 @@ var elevator_open: bool = true
 
 
 func _ready() -> void:
-	# Автоматический поиск компонентов если не заданы
 	if btn_animator == null:
 		btn_animator = %ElevatorBtnAnimator
 	
@@ -30,14 +29,14 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	close_interactions()
 
-# Обработчик взаимодействия
+
 func on_interaction() -> void:
 	play_press_animation() 
 	play_sound()
 	switch_elevator_state()
 
+
 func switch_elevator_state() -> void:
-	print(door_animator.get_animation_list())
 	
 	if elevator_open:
 		door_animator.play("animation_close")
@@ -47,10 +46,12 @@ func switch_elevator_state() -> void:
 	elevator_open = not elevator_open
 	print("Elevator state: ", "open" if elevator_open else "closed")
 
+
 func play_sound() -> void:
 	if press_sound and sound_player:
 		sound_player.stream = press_sound
 		sound_player.play()
+
 
 func play_press_animation() -> void:
 	if btn_animator and btn_animation_name:

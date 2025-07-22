@@ -1,12 +1,16 @@
 extends Node
 
-# Сигналы для управления взаимодействиями
+
 signal interactable_hovered(interactable)
 signal interactable_unhovered(interactable)
 signal interaction_completed(interactable)
 
+
 var hovered_object: InteractableBody3D = null
 var interactables: Array[InteractableBody3D] = []
+
+@export var interaction_distance: float = 5.0
+
 
 func _process(_delta: float) -> void:
 	var viewport = get_viewport()
@@ -17,11 +21,9 @@ func _process(_delta: float) -> void:
 	
 	# Выпускаем луч из центра экрана
 	var mouse_pos = viewport.get_mouse_position()
-	var ray_length = 10.0
 	var from = camera.project_ray_origin(mouse_pos)
-	var to = from + camera.project_ray_normal(mouse_pos) * ray_length
+	var to = from + camera.project_ray_normal(mouse_pos) * interaction_distance
 	
-	# Исправление: правильный способ получения пространства
 	var space_state = viewport.world_3d.direct_space_state
 	
 	var query = PhysicsRayQueryParameters3D.create(from, to)
@@ -29,14 +31,12 @@ func _process(_delta: float) -> void:
 	
 	var result = space_state.intersect_ray(query)
 	
-	# Обработка результатов рейкаста
 	var new_hovered = null
 	if result:
 		var collider = result.collider
 		if collider is InteractableBody3D and collider in interactables:
 			new_hovered = collider
 	
-	# Обновление состояния наведения
 	if new_hovered != hovered_object:
 		if hovered_object:
 			hovered_object.handle_hover_end()
@@ -48,16 +48,16 @@ func _process(_delta: float) -> void:
 			hovered_object.handle_hover_start()
 			emit_signal("interactable_hovered", hovered_object)
 	
-	# Обработка ввода
 	if Input.is_action_just_pressed("interact") and hovered_object:
 		if hovered_object.can_interact():
 			hovered_object.handle_interaction()
 			emit_signal("interaction_completed", hovered_object)
 
-# Регистрация интерактивных объектов
+
 func register_interactable(interactable: InteractableBody3D) -> void:
 	if not interactable in interactables:
 		interactables.append(interactable)
+
 
 func unregister_interactable(interactable: InteractableBody3D) -> void:
 	if interactable in interactables:
