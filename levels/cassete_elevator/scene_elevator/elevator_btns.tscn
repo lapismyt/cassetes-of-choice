@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=4 uid="uid://b7x7rmgwk0hyl"]
 
 [ext_resource type="Texture2D" uid="uid://6lwgwm10fiyw" path="res://models/elevator_buttons_0.png" id="1_on6ub"]
-[ext_resource type="Script" uid="uid://bsxturfe8os2a" path="res://levels/scene_elevator/elevator_button_interact.gd" id="2_on6ub"]
+[ext_resource type="Script" uid="uid://bsxturfe8os2a" path="res://levels/cassete_elevator/scene_elevator/elevator_button_interact.gd" id="2_on6ub"]
 [ext_resource type="Script" uid="uid://ctp840jxv1o6" path="res://base/scripts/interactable.gd" id="3_wvnw0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nix0"]

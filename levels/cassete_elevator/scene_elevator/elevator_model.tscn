@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=4 uid="uid://bdfdphueco6mt"]
+[gd_scene load_steps=26 format=4 uid="uid://bdfdphueco6mt"]
 
-[ext_resource type="Texture2D" uid="uid://f40qksv76lex" path="res://levels/scene_elevator/elevator_0.png" id="1_wap1a"]
-[ext_resource type="Script" uid="uid://db68354jin36b" path="res://levels/scene_elevator/elevatorAnim.gd" id="2_0n2le"]
-[ext_resource type="PackedScene" uid="uid://b7x7rmgwk0hyl" path="res://levels/scene_elevator/elevator_btns.tscn" id="3_0n2le"]
+[ext_resource type="Texture2D" uid="uid://f40qksv76lex" path="res://levels/cassete_elevator/scene_elevator/elevator_0.png" id="1_wap1a"]
+[ext_resource type="Script" uid="uid://db68354jin36b" path="res://levels/cassete_elevator/scene_elevator/elevatorAnim.gd" id="2_0n2le"]
+[ext_resource type="PackedScene" uid="uid://b7x7rmgwk0hyl" path="res://levels/cassete_elevator/scene_elevator/elevator_btns.tscn" id="3_0n2le"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3i2f"]
 resource_name = "material_0"
@@ -11,6 +11,7 @@ alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_wap1a")
+metallic_specular = 0.68
 texture_filter = 0
 texture_repeat = false
 
@@ -208,6 +209,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kpx2i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_war2m"]
+albedo_color = Color(0.592157, 0.509804, 0.372549, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0n2le"]
+material = SubResource("StandardMaterial3D_war2m")
 
 [sub_resource type="Animation" id="Animation_1308y"]
 resource_name = "animation_close"
@@ -441,6 +448,16 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Skeleton3D/cube_6/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.02368, -0.0995001)
 shape = SubResource("BoxShape3D_wpouv")
+
+[node name="ceiling" type="MeshInstance3D" parent="Skeleton3D"]
+transform = Transform3D(-3, 0, 4.52987e-07, 0, 0.01, 0, -4.52987e-07, 0, -3, 0, 3.98433, 0)
+mesh = SubResource("BoxMesh_0n2le")
+skeleton = NodePath("../..")
+
+[node name="floor" type="MeshInstance3D" parent="Skeleton3D"]
+transform = Transform3D(-3, 0, 4.52987e-07, 0, 0.01, 0, -4.52987e-07, 0, -3, 0, 0, 0)
+mesh = SubResource("BoxMesh_0n2le")
+skeleton = NodePath("../..")
 
 [node name="ElevatorDoorAnimator" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

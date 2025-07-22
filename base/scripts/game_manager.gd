@@ -5,7 +5,7 @@ var main_scene_path: String
 var main_scene_packed: PackedScene
 var main_scene_instance: Node
 
-@export var start_scene_path: StringName = "res://levels/scene_elevator/elevator.tscn"
+@export var start_scene_path: StringName = "res://levels/cassete_elevator/scene_elevator/elevator.tscn"
 
 @export var pause_menu_packed: PackedScene = preload("res://base/pause_menu.tscn")
 var pause_menu_instance: PauseMenu

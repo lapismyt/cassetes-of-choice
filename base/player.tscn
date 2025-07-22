@@ -1,105 +1,9 @@
 [gd_scene load_steps=36 format=4 uid="uid://cycggbcll3ur1"]
 
 [ext_resource type="Texture2D" uid="uid://sx2nqhfdc08p" path="res://models/player_0.png" id="1_eiwnc"]
-[ext_resource type="Script" uid="uid://c7ayvd48bbm0e" path="res://levels/scene_elevator/animation_player.gd" id="2_obxd5"]
-
-[sub_resource type="GDScript" id="GDScript_gst0h"]
-script/source = "extends CharacterBody3D
-
-@export var speed = 5.0
-@export var jump_force = 4.5
-@export var mouse_sensitivity = 0.002
-@export var crouch_speed = 2.5  # Скорость при приседании
-@export var standing_height = 1.8  # Нормальная высота
-@export var crouching_height = 1.0  # Высота при приседании
-
-@export var firstPerson = true
-
-
-var gravity = 9.8
-var is_crouching = false
-var normal_speed = speed
-
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	normal_speed = speed  # Инициализируем нормальную скорость
-
-func _input(event):
-	#if event.is_action_pressed(\"ui_cancel\"):
-		#get_tree().paused = not get_tree().paused
-		#var pause_menu: Control = $PauseMenu
-		#if pause_menu != null:
-			#$PauseMenu.visible = not $PauseMenu.visible
-
-	if event is InputEventMouseMotion:
-		rotate_y(-event.relative.x * mouse_sensitivity)
-		$fpCamera.rotate_x(-event.relative.y * mouse_sensitivity)
-		$fpCamera.rotation.x = clamp($fpCamera.rotation.x, -PI/2, PI/2)
-
-func _physics_process(delta):
-	# Обработка приседания
-	handle_crouch()
-	
-	# Движение
-	var current_speed = crouch_speed if is_crouching else speed
-	var input_dir = Input.get_vector(\"move_left\", \"move_right\", \"move_forward\", \"move_back\")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-	velocity.x = direction.x * current_speed
-	velocity.z = direction.z * current_speed
-
-	# Гравитация и прыжок
-	if not is_on_floor():
-		velocity.y -= gravity * delta
-	else:
-		if Input.is_action_just_pressed(\"jump\") and not is_crouching:
-			velocity.y = jump_force
-
-	move_and_slide()
-
-func handle_crouch():
-	if Input.is_action_just_pressed(\"sneak\"):
-		print_debug(\"sneak\")
-	if Input.is_action_pressed(\"sneak\") and not is_crouching:
-		# Начинаем приседать
-		is_crouching = true
-		$fpCamera.position.y = lerp(crouching_height,0.1,0.2)
-		$CollisionShape3D.shape.height = crouching_height * 0.9  # Уменьшаем коллизию
-		
-	elif not Input.is_action_pressed(\"sneak\") and is_crouching:
-		# Встаем только если над головой есть место
-		var space = get_world_3d().direct_space_state
-		var query = PhysicsRayQueryParameters3D.create(
-			global_position,
-			global_position + Vector3.UP * standing_height
-		)
-		var result = space.intersect_ray(query)
-		
-		if not result:
-			is_crouching = false
-			$fpCamera.position.y = standing_height
-			$CollisionShape3D.shape.height = standing_height * 0.9  # Восстанавливаем коллизию
-"
-
-[sub_resource type="GDScript" id="GDScript_4b0wd"]
-script/source = "extends Node
-
-func _ready():
-	# Настройка параметров записи через ProjectSettings
-	ProjectSettings.set_setting(\"editor/movie_writer/resolution_width\", 1280)
-	ProjectSettings.set_setting(\"editor/movie_writer/resolution_height\", 720)
-	ProjectSettings.set_setting(\"editor/movie_writer/quality\", 85)
-	ProjectSettings.set_setting(\"editor/movie_writer/codec\", \"libx264\")
-	
-	# Начать запись
-	ProjectSettings.set_setting(\"editor/movie_writer/movie_file\", \"user://game_recording.mp4\")
-	ProjectSettings.set_setting(\"editor/movie_writer/fps\", 60)
-	ProjectSettings.set_setting(\"editor/movie_writer/enabled\", true)
-	
-	# Остановить запись через 10 секунд (пример)
-	await get_tree().create_timer(10.0).timeout
-	ProjectSettings.set_setting(\"editor/movie_writer/enabled\", false)
-"
+[ext_resource type="Script" uid="uid://cxt4ffw5woafu" path="res://base/scripts/player.gd" id="1_obxd5"]
+[ext_resource type="Script" uid="uid://dggq65skvthjp" path="res://base/scripts/player_model.gd" id="2_0d6eq"]
+[ext_resource type="Script" uid="uid://c7ayvd48bbm0e" path="res://levels/cassete_elevator/scene_elevator/animation_player.gd" id="2_obxd5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mvdw"]
 resource_name = "material_0"
@@ -943,10 +847,10 @@ height = 2.4
 collision_layer = 2
 platform_floor_layers = 4294967043
 platform_wall_layers = 3
-script = SubResource("GDScript_gst0h")
+script = ExtResource("1_obxd5")
 
 [node name="blockbench_export" type="Node3D" parent="."]
-script = SubResource("GDScript_4b0wd")
+script = ExtResource("2_0d6eq")
 
 [node name="Node" type="Node3D" parent="blockbench_export"]
 
@@ -1067,14 +971,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6626, -0.106299)
 doppler_tracking = 2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="fpCamera"]
-transform = Transform3D(0.998973, -0.0438647, 0.011391, 0.0449202, 0.991678, -0.120655, -0.00600373, 0.121042, 0.992629, 0.0115891, -0.00774705, 0.00167601)
+transform = Transform3D(0.998973, -0.0438647, 0.011391, 0.0437382, 0.998981, 0.0111288, -0.0118675, -0.0106191, 0.999873, 0.0115891, -0.00774705, 0.00167601)
 light_color = Color(0.99, 0.99, 0.9108, 1)
-light_energy = 1.646
-light_indirect_energy = 10.213
-light_volumetric_fog_energy = 16.0
+light_energy = 0.23
+light_indirect_energy = 5.824
+light_volumetric_fog_energy = 12.783
 light_size = 0.808
-light_specular = 8.581
+light_specular = 0.189
 light_bake_mode = 1
 shadow_enabled = true
-spot_range = 9.75965
+spot_range = 15.0
+spot_angle = 37.2174
 spot_angle_attenuation = 2.0

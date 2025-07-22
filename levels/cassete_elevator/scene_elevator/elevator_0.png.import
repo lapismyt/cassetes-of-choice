@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f40qksv76lex"
-path.s3tc="res://.godot/imported/elevator_0.png-4dfb6638e6aaaf549374796fb78ebe13.s3tc.ctex"
+path.s3tc="res://.godot/imported/elevator_0.png-98ac2160a496dd9efc09c9c3228d77b0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://levels/scene_elevator/elevator_0.png"
-dest_files=["res://.godot/imported/elevator_0.png-4dfb6638e6aaaf549374796fb78ebe13.s3tc.ctex"]
+source_file="res://levels/cassete_elevator/scene_elevator/elevator_0.png"
+dest_files=["res://.godot/imported/elevator_0.png-98ac2160a496dd9efc09c9c3228d77b0.s3tc.ctex"]
 
 [params]
 

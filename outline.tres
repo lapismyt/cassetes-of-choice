@@ -5,5 +5,5 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_6lusg")
-shader_parameter/color = Color(1, 1, 1, 0.235294)
-shader_parameter/size = 1.1
+shader_parameter/color = Color(0.784314, 1, 1, 0.494118)
+shader_parameter/size = 1.2
