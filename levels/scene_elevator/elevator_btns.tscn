@@ -670,11 +670,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0625)
 mesh = SubResource("ArrayMesh_bqwmi")
 skeleton = NodePath("")
 
-[node name="button_0" type="Area3D" parent="Node/elevator_buttons" node_paths=PackedStringArray("animation_player")]
+[node name="button_0" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
 script = ExtResource("2_on6ub")
-animation_player = NodePath("../../../ElevatorBtnAnimator")
-animation_name = "button_0"
+interaction_cooldown = 1.5
 
 [node name="button_0_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -688,6 +687,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_1" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.5625, 0)
 script = ExtResource("3_wvnw0")
+interaction_cooldown = 1.5
 
 [node name="button_1_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 3.47727e-09)
@@ -701,6 +701,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_2" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5625, 0)
 script = ExtResource("3_wvnw0")
+interaction_cooldown = 1.5
 
 [node name="button_2_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -714,6 +715,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_3" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.75, 0)
 script = ExtResource("3_wvnw0")
+interaction_cooldown = 1.5
 
 [node name="button_3_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -727,6 +729,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_4" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.375, 0)
 script = ExtResource("3_wvnw0")
+interaction_cooldown = 1.5
 
 [node name="button_4_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -740,6 +743,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_5" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, 0.375, 0)
 script = ExtResource("3_wvnw0")
+interaction_cooldown = 1.5
 
 [node name="button_5_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -753,6 +757,7 @@ shape = SubResource("BoxShape3D_2m6yg")
 [node name="button_6" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.1875, 0)
 script = ExtResource("3_wvnw0")
+interaction_cooldown = 2.0
 
 [node name="button_6_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)

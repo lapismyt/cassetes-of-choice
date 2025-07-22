@@ -1,6 +1,6 @@
 extends AnimationPlayer
 
-@onready var anim_tree = $AnimationTree
+#@onready var anim_tree = $AnimationTree
 #@onready var state_machine = anim_tree["parameters/playback"]
 
 func _process(delta):
