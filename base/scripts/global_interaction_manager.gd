@@ -19,7 +19,6 @@ func _process(_delta: float) -> void:
 	var camera = viewport.get_camera_3d()
 	if not camera: return
 	
-	# Выпускаем луч из центра экрана
 	var mouse_pos = viewport.get_mouse_position()
 	var from = camera.project_ray_origin(mouse_pos)
 	var to = from + camera.project_ray_normal(mouse_pos) * interaction_distance
@@ -40,18 +39,21 @@ func _process(_delta: float) -> void:
 	if new_hovered != hovered_object:
 		if hovered_object:
 			hovered_object.handle_hover_end()
-			emit_signal("interactable_unhovered", hovered_object)
+			interactable_unhovered.emit(hovered_object)
+			#emit_signal("interactable_unhovered", hovered_object)
 		
 		hovered_object = new_hovered
 		
 		if hovered_object:
 			hovered_object.handle_hover_start()
-			emit_signal("interactable_hovered", hovered_object)
+			interactable_hovered.emit(hovered_object)
+			#emit_signal("interactable_hovered", hovered_object)
 	
 	if Input.is_action_just_pressed("interact") and hovered_object:
 		if hovered_object.can_interact():
 			hovered_object.handle_interaction()
-			emit_signal("interaction_completed", hovered_object)
+			interaction_completed.emit(hovered_object)
+			#emit_signal("interaction_completed", hovered_object)
 
 
 func register_interactable(interactable: InteractableBody3D) -> void:

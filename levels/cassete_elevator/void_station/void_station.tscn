@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://ce6kfak8lw1j5"]
+[gd_scene load_steps=3 format=3 uid="uid://ce6kfak8lw1j5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqp2w"]
+albedo_color = Color(0, 0, 0, 1)
+metallic_specular = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_dmuxd"]
+material = SubResource("StandardMaterial3D_sqp2w")
+flip_faces = true
+size = Vector3(10, 10, 10)
 
 [node name="VoidStation" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_dmuxd")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=31 format=4 uid="uid://b7x7rmgwk0hyl"]
+[gd_scene load_steps=30 format=4 uid="uid://b7x7rmgwk0hyl"]
 
 [ext_resource type="Texture2D" uid="uid://6lwgwm10fiyw" path="res://models/elevator_buttons_0.png" id="1_on6ub"]
 [ext_resource type="Script" uid="uid://bsxturfe8os2a" path="res://levels/cassete_elevator/scene_elevator/elevator_button_interact.gd" id="2_on6ub"]
-[ext_resource type="Script" uid="uid://ctp840jxv1o6" path="res://base/scripts/interactable.gd" id="3_wvnw0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nix0"]
 resource_name = "material_0"
@@ -273,9 +272,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j4lnk")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_on6ub"]
-size = Vector3(0.6, 0.889978, 0.136603)
-
 [sub_resource type="Animation" id="Animation_lddui"]
 resource_name = "button_0"
 length = 1.25
@@ -288,42 +284,42 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0, 0.0333333, 1, 0.125, 0.75, 0.00913823, 0.0666667, 1, 0.125, 0.75, 0.0214399, 0.1, 1, 0.125, 0.75, 0.0347969, 0.133333, 1, 0.125, 0.75, 0.0471004, 0.166667, 1, 0.125, 0.75, 0.0562409, 0.233333, 1, 0.125, 0.75, 0.0575482, 0.3, 1, 0.125, 0.75, 0.0565614, 0.433333, 1, 0.125, 0.75, 0.0615634, 0.466667, 1, 0.125, 0.75, 0.0626757, 0.5, 1, 0.125, 0.75, 0.0633755, 0.566667, 1, 0.125, 0.75, 0.0656493, 0.633333, 1, 0.125, 0.75, 0.0668296, 0.666667, 1, 0.125, 0.75, 0.0672375, 0.733333, 1, 0.125, 0.75, 0.0634475, 0.766667, 1, 0.125, 0.75, 0.0587963, 0.833333, 1, 0.125, 0.75, 0.0439815, 0.9, 1, 0.125, 0.75, 0.0236111, 0.933333, 1, 0.125, 0.75, 0.0148148, 1, 1, 0.125, 0.75, 0, 1.06667, 1, 0.125, 0.75, -0.00370371, 1.13333, 1, 0.125, 0.75, -0.00358796, 1.2, 1, 0.125, 0.75, -0.00104167, 1.25, 1, 0.125, 0.75, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("Node/elevator_buttons/button_1")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Node/elevator_buttons/button_2")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("Node/elevator_buttons/button_3")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Node/elevator_buttons/button_4")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("Node/elevator_buttons/button_5")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
 tracks/6/type = "position_3d"
 tracks/6/imported = true
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Node/elevator_buttons/button_6")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -341,46 +337,39 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0, 0.0333333, 1, 0.125, 0.5625, 0.00913823, 0.0666667, 1, 0.125, 0.5625, 0.0214399, 0.1, 1, 0.125, 0.5625, 0.0347969, 0.133333, 1, 0.125, 0.5625, 0.0471004, 0.166667, 1, 0.125, 0.5625, 0.0562409, 0.233333, 1, 0.125, 0.5625, 0.0575482, 0.3, 1, 0.125, 0.5625, 0.0565614, 0.433333, 1, 0.125, 0.5625, 0.0615634, 0.466667, 1, 0.125, 0.5625, 0.0626757, 0.5, 1, 0.125, 0.5625, 0.0633755, 0.566667, 1, 0.125, 0.5625, 0.0656493, 0.633333, 1, 0.125, 0.5625, 0.0668296, 0.666667, 1, 0.125, 0.5625, 0.0672375, 0.733333, 1, 0.125, 0.5625, 0.0634475, 0.766667, 1, 0.125, 0.5625, 0.0587963, 0.833333, 1, 0.125, 0.5625, 0.0439815, 0.9, 1, 0.125, 0.5625, 0.0236111, 0.933333, 1, 0.125, 0.5625, 0.0148148, 1, 1, 0.125, 0.5625, 0, 1.06667, 1, 0.125, 0.5625, -0.00370371, 1.13333, 1, 0.125, 0.5625, -0.00358796, 1.2, 1, 0.125, 0.5625, -0.00104167, 1.25, 1, 0.125, 0.5625, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node/elevator_buttons/button_0")
+tracks/1/enabled = false
+tracks/1/path = NodePath("Node/elevator_buttons/button_2")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
+tracks/1/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node/elevator_buttons/button_2")
+tracks/2/enabled = false
+tracks/2/path = NodePath("Node/elevator_buttons/button_3")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
+tracks/2/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node/elevator_buttons/button_3")
+tracks/3/enabled = false
+tracks/3/path = NodePath("Node/elevator_buttons/button_4")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
+tracks/3/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node/elevator_buttons/button_4")
+tracks/4/enabled = false
+tracks/4/path = NodePath("Node/elevator_buttons/button_5")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node/elevator_buttons/button_5")
+tracks/5/enabled = false
+tracks/5/path = NodePath("Node/elevator_buttons/button_6")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
-tracks/6/type = "position_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node/elevator_buttons/button_6")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
+tracks/5/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0)
 
 [sub_resource type="Animation" id="Animation_781bx"]
 resource_name = "button_2"
@@ -394,42 +383,42 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0, 0.0333333, 1, -0.25, 0.5625, 0.00913823, 0.0666667, 1, -0.25, 0.5625, 0.0214399, 0.1, 1, -0.25, 0.5625, 0.0347969, 0.133333, 1, -0.25, 0.5625, 0.0471004, 0.166667, 1, -0.25, 0.5625, 0.0562409, 0.233333, 1, -0.25, 0.5625, 0.0575482, 0.3, 1, -0.25, 0.5625, 0.0565614, 0.433333, 1, -0.25, 0.5625, 0.0615634, 0.466667, 1, -0.25, 0.5625, 0.0626757, 0.5, 1, -0.25, 0.5625, 0.0633755, 0.566667, 1, -0.25, 0.5625, 0.0656493, 0.633333, 1, -0.25, 0.5625, 0.0668296, 0.666667, 1, -0.25, 0.5625, 0.0672375, 0.733333, 1, -0.25, 0.5625, 0.0634475, 0.766667, 1, -0.25, 0.5625, 0.0587963, 0.833333, 1, -0.25, 0.5625, 0.0439815, 0.9, 1, -0.25, 0.5625, 0.0236111, 0.933333, 1, -0.25, 0.5625, 0.0148148, 1, 1, -0.25, 0.5625, 0, 1.06667, 1, -0.25, 0.5625, -0.00370371, 1.13333, 1, -0.25, 0.5625, -0.00358796, 1.2, 1, -0.25, 0.5625, -0.00104167, 1.25, 1, -0.25, 0.5625, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("Node/elevator_buttons/button_0")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Node/elevator_buttons/button_1")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("Node/elevator_buttons/button_3")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Node/elevator_buttons/button_4")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("Node/elevator_buttons/button_5")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
 tracks/6/type = "position_3d"
 tracks/6/imported = true
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Node/elevator_buttons/button_6")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -447,42 +436,42 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0, 0.0333333, 1, -0.25, 0.75, 0.00913823, 0.0666667, 1, -0.25, 0.75, 0.0214399, 0.1, 1, -0.25, 0.75, 0.0347969, 0.133333, 1, -0.25, 0.75, 0.0471004, 0.166667, 1, -0.25, 0.75, 0.0562409, 0.233333, 1, -0.25, 0.75, 0.0575482, 0.3, 1, -0.25, 0.75, 0.0565614, 0.433333, 1, -0.25, 0.75, 0.0615634, 0.466667, 1, -0.25, 0.75, 0.0626757, 0.5, 1, -0.25, 0.75, 0.0633755, 0.566667, 1, -0.25, 0.75, 0.0656493, 0.633333, 1, -0.25, 0.75, 0.0668296, 0.666667, 1, -0.25, 0.75, 0.0672375, 0.733333, 1, -0.25, 0.75, 0.0634475, 0.766667, 1, -0.25, 0.75, 0.0587963, 0.833333, 1, -0.25, 0.75, 0.0439815, 0.9, 1, -0.25, 0.75, 0.0236111, 0.933333, 1, -0.25, 0.75, 0.0148148, 1, 1, -0.25, 0.75, 0, 1.06667, 1, -0.25, 0.75, -0.00370371, 1.13333, 1, -0.25, 0.75, -0.00358796, 1.2, 1, -0.25, 0.75, -0.00104167, 1.25, 1, -0.25, 0.75, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("Node/elevator_buttons/button_0")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Node/elevator_buttons/button_1")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("Node/elevator_buttons/button_2")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Node/elevator_buttons/button_4")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("Node/elevator_buttons/button_5")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
 tracks/6/type = "position_3d"
 tracks/6/imported = true
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Node/elevator_buttons/button_6")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -500,42 +489,42 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0, 0.0333333, 1, 0.125, 0.375, 0.00913823, 0.0666667, 1, 0.125, 0.375, 0.0214399, 0.1, 1, 0.125, 0.375, 0.0347969, 0.133333, 1, 0.125, 0.375, 0.0471004, 0.166667, 1, 0.125, 0.375, 0.0562409, 0.233333, 1, 0.125, 0.375, 0.0575482, 0.3, 1, 0.125, 0.375, 0.0565614, 0.433333, 1, 0.125, 0.375, 0.0615634, 0.466667, 1, 0.125, 0.375, 0.0626757, 0.5, 1, 0.125, 0.375, 0.0633755, 0.566667, 1, 0.125, 0.375, 0.0656493, 0.633333, 1, 0.125, 0.375, 0.0668296, 0.666667, 1, 0.125, 0.375, 0.0672375, 0.733333, 1, 0.125, 0.375, 0.0634475, 0.766667, 1, 0.125, 0.375, 0.0587963, 0.833333, 1, 0.125, 0.375, 0.0439815, 0.9, 1, 0.125, 0.375, 0.0236111, 0.933333, 1, 0.125, 0.375, 0.0148148, 1, 1, 0.125, 0.375, 0, 1.06667, 1, 0.125, 0.375, -0.00370371, 1.13333, 1, 0.125, 0.375, -0.00358796, 1.2, 1, 0.125, 0.375, -0.00104167, 1.25, 1, 0.125, 0.375, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("Node/elevator_buttons/button_0")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Node/elevator_buttons/button_1")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("Node/elevator_buttons/button_2")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Node/elevator_buttons/button_3")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("Node/elevator_buttons/button_5")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0)
 tracks/6/type = "position_3d"
 tracks/6/imported = true
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Node/elevator_buttons/button_6")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -553,42 +542,42 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, -0.0625, 0.375, 0, 0.0333333, 1, -0.0625, 0.375, 0.00913823, 0.0666667, 1, -0.0625, 0.375, 0.0214399, 0.1, 1, -0.0625, 0.375, 0.0347969, 0.133333, 1, -0.0625, 0.375, 0.0471004, 0.166667, 1, -0.0625, 0.375, 0.0562409, 0.233333, 1, -0.0625, 0.375, 0.0575482, 0.3, 1, -0.0625, 0.375, 0.0565614, 0.433333, 1, -0.0625, 0.375, 0.0615634, 0.466667, 1, -0.0625, 0.375, 0.0626757, 0.5, 1, -0.0625, 0.375, 0.0633755, 0.566667, 1, -0.0625, 0.375, 0.0656493, 0.633333, 1, -0.0625, 0.375, 0.0668296, 0.666667, 1, -0.0625, 0.375, 0.0672375, 0.733333, 1, -0.0625, 0.375, 0.0634475, 0.766667, 1, -0.0625, 0.375, 0.0587963, 0.833333, 1, -0.0625, 0.375, 0.0439815, 0.9, 1, -0.0625, 0.375, 0.0236111, 0.933333, 1, -0.0625, 0.375, 0.0148148, 1, 1, -0.0625, 0.375, 0, 1.06667, 1, -0.0625, 0.375, -0.00370371, 1.13333, 1, -0.0625, 0.375, -0.00358796, 1.2, 1, -0.0625, 0.375, -0.00104167, 1.25, 1, -0.0625, 0.375, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("Node/elevator_buttons/button_0")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Node/elevator_buttons/button_1")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("Node/elevator_buttons/button_2")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Node/elevator_buttons/button_3")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("Node/elevator_buttons/button_4")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
 tracks/6/type = "position_3d"
 tracks/6/imported = true
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Node/elevator_buttons/button_6")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -606,42 +595,42 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0.125, 0.1875, 0, 0.0333333, 1, 0.125, 0.1875, 0.00913823, 0.0666667, 1, 0.125, 0.1875, 0.0214399, 0.1, 1, 0.125, 0.1875, 0.0347969, 0.133333, 1, 0.125, 0.1875, 0.0471004, 0.166667, 1, 0.125, 0.1875, 0.0562409, 0.233333, 1, 0.125, 0.1875, 0.0575482, 0.3, 1, 0.125, 0.1875, 0.0565614, 0.433333, 1, 0.125, 0.1875, 0.0615634, 0.466667, 1, 0.125, 0.1875, 0.0626757, 0.5, 1, 0.125, 0.1875, 0.0633755, 0.566667, 1, 0.125, 0.1875, 0.0656493, 0.633333, 1, 0.125, 0.1875, 0.0668296, 0.666667, 1, 0.125, 0.1875, 0.0672375, 0.733333, 1, 0.125, 0.1875, 0.0634475, 0.766667, 1, 0.125, 0.1875, 0.0587963, 0.833333, 1, 0.125, 0.1875, 0.0439815, 0.9, 1, 0.125, 0.1875, 0.0236111, 0.933333, 1, 0.125, 0.1875, 0.0148148, 1, 1, 0.125, 0.1875, 0, 1.06667, 1, 0.125, 0.1875, -0.00370371, 1.13333, 1, 0.125, 0.1875, -0.00358796, 1.2, 1, 0.125, 0.1875, -0.00104167, 1.25, 1, 0.125, 0.1875, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("Node/elevator_buttons/button_0")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0.125, 0.75, 0)
 tracks/2/type = "position_3d"
 tracks/2/imported = true
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Node/elevator_buttons/button_1")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.125, 0.5625, 0)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("Node/elevator_buttons/button_2")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.25, 0.5625, 0)
 tracks/4/type = "position_3d"
 tracks/4/imported = true
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Node/elevator_buttons/button_3")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, -0.25, 0.75, 0)
 tracks/5/type = "position_3d"
 tracks/5/imported = true
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("Node/elevator_buttons/button_4")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, 0.125, 0.375, 0)
 tracks/6/type = "position_3d"
 tracks/6/imported = true
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Node/elevator_buttons/button_5")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -658,6 +647,9 @@ _data = {
 &"button_6": SubResource("Animation_triok")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_on6ub"]
+size = Vector3(0.6, 0.889978, 0.136603)
+
 [node name="elevator_btns" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
@@ -673,7 +665,7 @@ skeleton = NodePath("")
 [node name="button_0" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, 0)
 script = ExtResource("2_on6ub")
-interaction_cooldown = 1.5
+interaction_cooldown = 1.2
 
 [node name="button_0_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -686,8 +678,8 @@ shape = SubResource("BoxShape3D_2m6yg")
 
 [node name="button_1" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.5625, 0)
-script = ExtResource("3_wvnw0")
-interaction_cooldown = 1.5
+script = ExtResource("2_on6ub")
+interaction_cooldown = 1.2
 
 [node name="button_1_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 3.47727e-09)
@@ -700,8 +692,8 @@ shape = SubResource("BoxShape3D_2m6yg")
 
 [node name="button_2" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5625, 0)
-script = ExtResource("3_wvnw0")
-interaction_cooldown = 1.5
+script = ExtResource("2_on6ub")
+interaction_cooldown = 1.2
 
 [node name="button_2_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -714,8 +706,8 @@ shape = SubResource("BoxShape3D_2m6yg")
 
 [node name="button_3" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.75, 0)
-script = ExtResource("3_wvnw0")
-interaction_cooldown = 1.5
+script = ExtResource("2_on6ub")
+interaction_cooldown = 1.2
 
 [node name="button_3_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -728,8 +720,8 @@ shape = SubResource("BoxShape3D_2m6yg")
 
 [node name="button_4" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.375, 0)
-script = ExtResource("3_wvnw0")
-interaction_cooldown = 1.5
+script = ExtResource("2_on6ub")
+interaction_cooldown = 1.2
 
 [node name="button_4_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -742,8 +734,8 @@ shape = SubResource("BoxShape3D_2m6yg")
 
 [node name="button_5" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, 0.375, 0)
-script = ExtResource("3_wvnw0")
-interaction_cooldown = 1.5
+script = ExtResource("2_on6ub")
+interaction_cooldown = 1.2
 
 [node name="button_5_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -756,8 +748,8 @@ shape = SubResource("BoxShape3D_2m6yg")
 
 [node name="button_6" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.1875, 0)
-script = ExtResource("3_wvnw0")
-interaction_cooldown = 1.5
+script = ExtResource("2_on6ub")
+interaction_cooldown = 1.2
 
 [node name="button_6_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0625, 0)
@@ -768,6 +760,13 @@ skeleton = NodePath("")
 transform = Transform3D(13.5712, 0, 0, 0, 13.5712, 0, 0, 0, 13.5712, 0.00118656, 0.00220436, 0.0153022)
 shape = SubResource("BoxShape3D_2m6yg")
 
+[node name="ElevatorBtnAnimator" type="AnimationPlayer" parent="Node/elevator_buttons"]
+unique_name_in_owner = true
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_c87fy")
+}
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.444989, 0.0646333)
 shape = SubResource("BoxShape3D_on6ub")
@@ -775,9 +774,3 @@ shape = SubResource("BoxShape3D_on6ub")
 [node name="ElevatorSoundPlayer" type="AudioStreamPlayer3D" parent="Node/elevator_buttons"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0535794, 0.476662, -0.0839194)
-
-[node name="ElevatorBtnAnimator" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_c87fy")
-}

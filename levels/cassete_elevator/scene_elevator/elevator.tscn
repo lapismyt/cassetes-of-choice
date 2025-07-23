@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dj488rjfy17jt"]
 
 [ext_resource type="PackedScene" uid="uid://cycggbcll3ur1" path="res://base/player.tscn" id="1_1s7mg"]
-[ext_resource type="Material" uid="uid://cuxpu1y012fpk" path="res://vhs.tres" id="3_sdm6y"]
+[ext_resource type="PackedScene" uid="uid://dxfmcno3dxx3h" path="res://base/vhs_layer.tscn" id="2_2vcwo"]
 [ext_resource type="PackedScene" uid="uid://bdfdphueco6mt" path="res://levels/cassete_elevator/scene_elevator/elevator_model.tscn" id="4_pfpvq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_iyo7h"]
@@ -62,14 +62,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.14902)
 navigation_mesh = SubResource("NavigationMesh_5s0of")
 navigation_layers = 7
 
-[node name="ColorRect" type="ColorRect" parent="."]
-material = ExtResource("3_sdm6y")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.548265, 0.1193, 0.480669, 1)
+[node name="VHSLayer" parent="." instance=ExtResource("2_2vcwo")]
 
 [node name="elevator_model" parent="." instance=ExtResource("4_pfpvq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.226868, 0)

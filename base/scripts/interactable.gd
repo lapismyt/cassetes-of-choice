@@ -60,7 +60,7 @@ func handle_hover_start() -> void:
 	if mesh_instance and hovered_material:
 		mesh_instance.mesh.surface_set_material(0, hovered_material)
 	
-	SignalBus.emit_signal("hover_started", self)
+	SignalBus.interact_hover_started.emit(self)
 
 
 func handle_hover_end() -> void:
@@ -70,7 +70,7 @@ func handle_hover_end() -> void:
 	if mesh_instance and original_material:
 		mesh_instance.mesh.surface_set_material(0, original_material)
 	
-	SignalBus.emit_signal("hover_ended", self)
+	SignalBus.interact_hover_ended.emit(self)
 
 
 func handle_interaction() -> void:

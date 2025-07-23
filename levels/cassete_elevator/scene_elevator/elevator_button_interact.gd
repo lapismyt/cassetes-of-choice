@@ -2,11 +2,9 @@ extends InteractableBody3D
 
 @export var btn_animator: AnimationPlayer
 @export var door_animator: AnimationPlayer
-@export var btn_animation_name: String = "button_0"
+@export var btn_animation_name: StringName = ""
 @export var press_sound: AudioStreamMP3 = preload("res://base/sound/sfx/btn_press_pipe.mp3")
 @export var sound_player: AudioStreamPlayer3D
-
-var elevator_open: bool = true
 
 
 func _ready() -> void:
@@ -18,6 +16,9 @@ func _ready() -> void:
 	
 	if sound_player == null:
 		sound_player = %ElevatorSoundPlayer
+	
+	if btn_animation_name == &"":
+		btn_animation_name = name
 	
 	# Поиск аниматора дверей лифта
 	if door_animator == null:
@@ -31,20 +32,31 @@ func _exit_tree() -> void:
 
 
 func on_interaction() -> void:
-	play_press_animation() 
+	if not check_door_animation():
+		return
+	if not play_press_animation():
+		return
 	play_sound()
 	switch_elevator_state()
 
 
+func check_door_animation() -> bool:
+	if door_animator.is_playing():
+		return false
+	return true
+
+
 func switch_elevator_state() -> void:
 	
-	if elevator_open:
+	
+	if DataStoreElevator.elevator_open:
 		door_animator.play("animation_close")
 	else:
-		door_animator.play('animation_close',-1,-1,true)
+		door_animator.play('animation_close',-1,-1.2,true)
 	
-	elevator_open = not elevator_open
-	print("Elevator state: ", "open" if elevator_open else "closed")
+	DataStoreElevator.elevator_open = not DataStoreElevator.elevator_open
+	
+	print("Elevator state: ", "open" if DataStoreElevator.elevator_open else "closed")
 
 
 func play_sound() -> void:
@@ -53,10 +65,13 @@ func play_sound() -> void:
 		sound_player.play()
 
 
-func play_press_animation() -> void:
+func play_press_animation() -> bool:
 	if btn_animator and btn_animation_name:
 		if btn_animator.has_animation(btn_animation_name):
-			btn_animator.play(btn_animation_name)
+			if btn_animator.current_animation == "":
+				btn_animator.play(btn_animation_name, -1.0, 2.0)
+				return true
 		else:
 			push_error("Animation '%s' not found" % btn_animation_name)
 			print(btn_animator.get_animation_list())
+	return false
