@@ -23,7 +23,7 @@ func _exit_tree() -> void:
 func init_interactions() -> void:
 	_load_mesh_instance()
 	_load_materials()
-	
+
 	GlobalInteractionManager.register_interactable(self)
 
 
@@ -45,7 +45,7 @@ func _load_mesh_instance() -> void:
 func _load_materials() -> void:
 	if mesh_instance:
 		original_material = mesh_instance.mesh.surface_get_material(0)
-		
+
 		if hovered_material == null:
 			hovered_material = original_material.duplicate()
 			var outline = preload("res://outline.tres")
@@ -54,29 +54,31 @@ func _load_materials() -> void:
 
 
 func handle_hover_start() -> void:
-	if is_hovered: return
+	if is_hovered:
+		return
 	is_hovered = true
-	
+
 	if mesh_instance and hovered_material:
 		mesh_instance.mesh.surface_set_material(0, hovered_material)
-	
+
 	SignalBus.interact_hover_started.emit(self)
 
 
 func handle_hover_end() -> void:
-	if not is_hovered: return
+	if not is_hovered:
+		return
 	is_hovered = false
-	
+
 	if mesh_instance and original_material:
 		mesh_instance.mesh.surface_set_material(0, original_material)
-	
+
 	SignalBus.interact_hover_ended.emit(self)
 
 
 func handle_interaction() -> void:
 	since_last_interaction = 0
 	SignalBus.emit_signal("interaction_started", self)
-	
+
 	if has_method("on_interaction"):
 		call("on_interaction")
 

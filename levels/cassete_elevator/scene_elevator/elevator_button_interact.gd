@@ -10,20 +10,22 @@ extends InteractableBody3D
 func _ready() -> void:
 	if btn_animator == null:
 		btn_animator = %ElevatorBtnAnimator
-	
+
 	if door_animator == null:
 		door_animator = null
-	
+
 	if sound_player == null:
 		sound_player = %ElevatorSoundPlayer
-	
+
 	if btn_animation_name == &"":
 		btn_animation_name = name
-	
+
 	# Поиск аниматора дверей лифта
 	if door_animator == null:
-		door_animator = get_tree().root.get_node("GameManager/ElevatorScene/elevator_model/ElevatorDoorAnimator")
-	
+		door_animator = get_tree().root.get_node(
+			"GameManager/ElevatorScene/elevator_model/ElevatorDoorAnimator"
+		)
+
 	init_interactions()
 
 
@@ -47,15 +49,13 @@ func check_door_animation() -> bool:
 
 
 func switch_elevator_state() -> void:
-	
-	
 	if DataStoreElevator.elevator_open:
 		door_animator.play("animation_close")
 	else:
-		door_animator.play('animation_close',-1,-1.2,true)
-	
+		door_animator.play("animation_close", -1, -1.2, true)
+
 	DataStoreElevator.elevator_open = not DataStoreElevator.elevator_open
-	
+
 	print("Elevator state: ", "open" if DataStoreElevator.elevator_open else "closed")
 
 
