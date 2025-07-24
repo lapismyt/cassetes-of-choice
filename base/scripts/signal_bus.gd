@@ -14,4 +14,4 @@ static var instance: SignalBus
 
 
 func _ready() -> void:
-	instance = self
+    instance = self
