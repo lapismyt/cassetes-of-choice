@@ -20,7 +20,6 @@ signal resumed
 signal crouch_start(player: PlayerBody)
 signal crouch_stop(player: PlayerBody)
 
-
 static var instance: SignalBus
 
 
