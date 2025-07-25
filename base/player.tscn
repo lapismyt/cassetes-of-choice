@@ -1,9 +1,10 @@
-[gd_scene load_steps=36 format=4 uid="uid://cycggbcll3ur1"]
+[gd_scene load_steps=37 format=4 uid="uid://cycggbcll3ur1"]
 
 [ext_resource type="Texture2D" uid="uid://sx2nqhfdc08p" path="res://models/player_0.png" id="1_eiwnc"]
 [ext_resource type="Script" uid="uid://cxt4ffw5woafu" path="res://base/scripts/player.gd" id="1_obxd5"]
 [ext_resource type="Script" uid="uid://dggq65skvthjp" path="res://base/scripts/player_model.gd" id="2_0d6eq"]
 [ext_resource type="Script" uid="uid://c7ayvd48bbm0e" path="res://levels/cassete_elevator/scene_elevator/animation_player.gd" id="2_obxd5"]
+[ext_resource type="Script" uid="uid://bp3xnv2r7w53c" path="res://base/scripts/player_music_manager.gd" id="5_d0w1b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mvdw"]
 resource_name = "material_0"
@@ -841,7 +842,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iyo7h"]
-height = 2.4
+radius = 0.3
+height = 1.8
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -962,7 +964,7 @@ libraries = {
 script = ExtResource("2_obxd5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 shape = SubResource("CapsuleShape3D_iyo7h")
 debug_color = Color(0.921569, 0, 0.690196, 0.145098)
 
@@ -983,3 +985,6 @@ shadow_enabled = true
 spot_range = 15.0
 spot_angle = 37.2174
 spot_angle_attenuation = 2.0
+
+[node name="MusicManager" type="Node3D" parent="."]
+script = ExtResource("5_d0w1b")

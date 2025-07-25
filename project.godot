@@ -17,8 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalInteractionManager="*res://base/scripts/global_interaction_manager.gd"
 SignalBus="*res://base/scripts/signal_bus.gd"
+ResourceManager="*res://base/scripts/resource_manager.gd"
+GlobalInteractionManager="*res://base/scripts/global_interaction_manager.gd"
 DataStoreElevator="*res://levels/cassete_elevator/scene_elevator/data_store_elevator.gd"
 
 [dotnet]
@@ -87,6 +88,10 @@ pause={
 
 3d_physics/layer_1="environment"
 3d_physics/layer_2="player"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
 
 [rendering]
 

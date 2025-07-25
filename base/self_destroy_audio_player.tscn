@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://rxm77c4vdcim"]
+
+[ext_resource type="Script" uid="uid://ck0rqc6iowjox" path="res://base/scripts/self_destroy_audio_player.gd" id="1_n3w1j"]
+
+[node name="SelfDestroyAudioPlayer" type="AudioStreamPlayer3D"]
+script = ExtResource("1_n3w1j")
+metadata/_custom_type_script = "uid://ck0rqc6iowjox"
