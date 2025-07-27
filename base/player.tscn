@@ -842,8 +842,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iyo7h"]
-radius = 0.3
-height = 1.8
+radius = 0.276383
+height = 1.73642
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -964,12 +964,12 @@ libraries = {
 script = ExtResource("2_obxd5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.873075, 0)
 shape = SubResource("CapsuleShape3D_iyo7h")
 debug_color = Color(0.921569, 0, 0.690196, 0.145098)
 
 [node name="fpCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6626, -0.106299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5626, -0.106299)
 doppler_tracking = 2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="fpCamera"]

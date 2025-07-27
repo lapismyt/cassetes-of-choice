@@ -84,16 +84,16 @@ func handle_interaction() -> void:
 
 
 func can_interact() -> bool:
-	print("===========")
-	print_debug(last_interaction)
-	print_debug(Time.get_ticks_msec())
-	print_debug(interaction_cooldown)
-	print_debug(
-		(
-			last_interaction == null
-			or (Time.get_ticks_msec() - last_interaction) >= interaction_cooldown
-		)
-	)
+	# print("===========")
+	# print_debug(last_interaction)
+	# print_debug(Time.get_ticks_msec())
+	# print_debug(interaction_cooldown)
+	# print_debug(
+	# 	(
+	# 		last_interaction == null
+	# 		or (Time.get_ticks_msec() - last_interaction) >= interaction_cooldown
+	# 	)
+	# )
 	return (
 		last_interaction == null
 		or (Time.get_ticks_msec() - last_interaction) >= interaction_cooldown

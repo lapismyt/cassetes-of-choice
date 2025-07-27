@@ -16,14 +16,14 @@ func _ready():
 
 
 func open_doors() -> void:
-	print_debug("elevator open played")
+	# print_debug("elevator open played")
 	if not DataStoreElevator.elevator_open:
 		play("animation_close", -1, -1, true)
 		DataStoreElevator.elevator_open = true
 
 
 func close_doors() -> void:
-	print_debug("elevator close played")
+	# print_debug("elevator close played")
 	if DataStoreElevator.elevator_open:
 		play("animation_close")
 		DataStoreElevator.elevator_open = false

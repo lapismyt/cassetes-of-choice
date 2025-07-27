@@ -13,6 +13,12 @@ func _ready() -> void:
 		door_animator = %ElevatorDoorAnimator
 
 	SignalBus.change_elevator_station_sig.connect(change_station)
+	SignalBus.add_debug_label.emit("Elevator Station: ???", "elevator_station")
+
+
+func _exit_tree() -> void:
+	# print_debug(SignalBus.remove_debug_label)
+	SignalBus.remove_debug_label.emit("elevator_station")
 
 
 func open_doors() -> void:
@@ -36,6 +42,10 @@ func change_station(station: PackedScene) -> void:
 	current_station_instance = current_station.instantiate()
 	SignalBus.elevator_transition_started.emit()
 	add_child(current_station_instance)
+
+	SignalBus.update_debug_label.emit(
+		"Elevator Station: " + current_station_instance.name, "elevator_station"
+	)
 
 
 func _process(_delta: float) -> void:

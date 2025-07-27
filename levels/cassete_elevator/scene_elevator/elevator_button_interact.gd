@@ -25,7 +25,7 @@ func _exit_tree() -> void:
 
 
 func on_interaction() -> void:
-	print_debug("try interact")
+	# print_debug("try interact")
 	if not play_press_animation():
 		return
 	play_sound()
