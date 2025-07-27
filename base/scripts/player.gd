@@ -58,8 +58,8 @@ func _physics_process(delta):
 
 
 func handle_crouch():
-	if Input.is_action_just_pressed("sneak"):
-		print_debug("sneak pressed")
+	# if Input.is_action_just_pressed("sneak"):
+	# 	print_debug("sneak pressed")
 	if Input.is_action_pressed("sneak") and not is_crouching:
 		is_crouching = true
 		fp_camera.position.y = lerp(standing_height, crouching_height, 0.2)
@@ -76,7 +76,7 @@ func handle_crouch():
 		)
 		var result = space.intersect_ray(query)
 
-		print_debug(result)
+		# print_debug(result)
 
 		if not result:
 			is_crouching = false
