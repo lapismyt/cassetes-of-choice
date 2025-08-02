@@ -21,6 +21,8 @@ SignalBus="*res://base/scripts/signal_bus.gd"
 ResourceManager="*res://base/scripts/resource_manager.gd"
 GlobalInteractionManager="*res://base/scripts/global_interaction_manager.gd"
 DataStoreElevator="*res://levels/cassete_elevator/scene_elevator/data_store_elevator.gd"
+Enums="*res://base/scripts/enums.gd"
+DataStoreGlobal="*res://base/scripts/data_store_global.gd"
 
 [dotnet]
 

@@ -1,3 +1,4 @@
+class_name ElevatorSceneManager
 extends Node3D
 
 var current_station: PackedScene
@@ -14,6 +15,9 @@ func _ready() -> void:
 
 	SignalBus.change_elevator_station_sig.connect(change_station)
 	SignalBus.add_debug_label.emit("Elevator Station: ???", "elevator_station")
+
+	DataStoreGlobal.player = find_child("Player")
+	print_debug("stored player")
 
 
 func _exit_tree() -> void:

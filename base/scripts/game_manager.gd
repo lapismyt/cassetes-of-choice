@@ -14,7 +14,11 @@ var pause_menu_instance: PauseMenu
 @export var debug_menu_packed: PackedScene = ResourceManager.debug_menu_scene
 var debug_menu_instance: DebugMenu
 
+@export var dummy_stop_packed: PackedScene = ResourceManager.dummy_stop_scene
+var dummy_stop_instance: Node
+
 @export var pause_cooldown_time: float = 0.1
+var dummy_stopped: bool = false
 var pause_cooldown: bool = false
 var is_paused: bool = false
 
@@ -52,6 +56,13 @@ func disable_debug_menu() -> void:
 	if debug_menu_instance != null:
 		debug_menu_instance.queue_free()
 		debug_menu_instance = null
+
+
+func enable_dummy_stop() -> void:
+	if dummy_stop_instance == null:
+		dummy_stop_instance = dummy_stop_packed.instantiate()
+		add_child(dummy_stop_instance)
+		get_tree().paused = true
 
 
 func set_main_scene(path: String):

@@ -1,18 +1,18 @@
 class_name PlayerBody
 extends CharacterBody3D
 
-@export var speed = 5.0
-@export var jump_force = 4.5
-@export var mouse_sensitivity = 0.002
-@export var crouch_speed = 2.5  # Скорость при приседании
-@export var standing_height = 1.8  # Нормальная высота
-@export var crouching_height = 0.9  # Высота при приседании
+@export var speed: float = 5.0
+@export var jump_force: float = 4.5
+@export var mouse_sensitivity: float = 0.002
+@export var crouch_speed: float = 2.5  # Скорость при приседании
+@export var standing_height: float = 1.25  # Нормальная высота
+@export var crouching_height: float = 0.85  # Высота при приседании
 
-@export var firstPerson = true
+@export var firstPerson: bool = true
 
-var gravity = 9.8
-var is_crouching = false
-var normal_speed = speed
+var gravity: float = 9.8
+var is_crouching: bool = false
+var normal_speed: float = speed
 
 @export var fp_camera: Camera3D
 @export var collision: CollisionShape3D

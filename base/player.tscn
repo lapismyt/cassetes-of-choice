@@ -843,7 +843,7 @@ _data = {
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iyo7h"]
 radius = 0.276383
-height = 1.73642
+height = 1.25
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -852,6 +852,7 @@ platform_wall_layers = 3
 script = ExtResource("1_obxd5")
 
 [node name="blockbench_export" type="Node3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("2_0d6eq")
 
 [node name="Node" type="Node3D" parent="blockbench_export"]
@@ -964,12 +965,12 @@ libraries = {
 script = ExtResource("2_obxd5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.873075, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.629689, 0)
 shape = SubResource("CapsuleShape3D_iyo7h")
 debug_color = Color(0.921569, 0, 0.690196, 0.145098)
 
 [node name="fpCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5626, -0.106299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.106)
 doppler_tracking = 2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="fpCamera"]

@@ -21,6 +21,7 @@ var self_destroy_audio_player: PackedScene = preload("res://base/self_destroy_au
 )
 @export var pause_menu_scene: PackedScene = preload("res://base/pause_menu.tscn")
 @export var debug_menu_scene: PackedScene = preload("res://base/debug_menu.tscn")
+@export var dummy_stop_scene: PackedScene = preload("res://base/dummy_stop.tscn")
 
 # materials
 @export var outline_material: ShaderMaterial = preload("res://outline.tres")
