@@ -5,8 +5,8 @@ extends CharacterBody3D
 @export var jump_force: float = 4.5
 @export var mouse_sensitivity: float = 0.002
 @export var crouch_speed: float = 2.5  # Скорость при приседании
-@export var standing_height: float = 1.25  # Нормальная высота
-@export var crouching_height: float = 0.85  # Высота при приседании
+@export var standing_height: float = 1.75  # Нормальная высота
+@export var crouching_height: float = 1.0  # Высота при приседании
 
 @export var firstPerson: bool = true
 

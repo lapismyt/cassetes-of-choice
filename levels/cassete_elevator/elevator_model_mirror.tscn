@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=4 uid="uid://bdfdphueco6mt"]
+[gd_scene load_steps=22 format=4 uid="uid://dq866yh0wbsas"]
 
-[ext_resource type="Texture2D" uid="uid://f40qksv76lex" path="res://levels/cassete_elevator/scene_elevator/elevator_0.png" id="1_wap1a"]
-[ext_resource type="Script" uid="uid://db68354jin36b" path="res://levels/cassete_elevator/scene_elevator/elevatorAnim.gd" id="2_0n2le"]
-[ext_resource type="PackedScene" uid="uid://b7x7rmgwk0hyl" path="res://levels/cassete_elevator/scene_elevator/elevator_btns.tscn" id="3_0n2le"]
+[ext_resource type="Texture2D" uid="uid://f40qksv76lex" path="res://levels/cassete_elevator/scene_elevator/elevator_0.png" id="1_40qu1"]
+[ext_resource type="PackedScene" uid="uid://b7x7rmgwk0hyl" path="res://levels/cassete_elevator/scene_elevator/elevator_btns.tscn" id="3_406cw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3i2f"]
 resource_name = "material_0"
@@ -10,7 +9,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("1_wap1a")
+albedo_texture = ExtResource("1_40qu1")
 metallic_specular = 0.68
 texture_filter = 0
 texture_repeat = false
@@ -216,64 +215,6 @@ albedo_color = Color(0.592157, 0.509804, 0.372549, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_0n2le"]
 material = SubResource("StandardMaterial3D_war2m")
 
-[sub_resource type="Animation" id="Animation_1308y"]
-resource_name = "animation_close"
-length = 0.75
-step = 0.03125
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton3D:door_left")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.625, 0, 0, 0.0625, 1, -0.634444, 0, 0, 0.09375, 1, -0.634444, 0, 0, 0.125, 1, -0.625, 0, 0, 0.1875, 1, -0.4975, 0, 0, 0.21875, 1, -0.443553, 0, 0, 0.28125, 1, -0.374873, 0, 0, 0.3125, 1, -0.337963, 0, 0, 0.34375, 1, -0.28668, 0, 0, 0.375, 1, -0.209219, 0, 0, 0.40625, 1, -0.134805, 0, 0, 0.4375, 1, -0.100536, 0, 0, 0.46875, 1, -0.0868305, 0, 0, 0.53125, 1, -0.0613825, 0, 0, 0.5625, 1, -0.0501379, 0, 0, 0.625, 1, -0.0291284, 0, 0, 0.6875, 1, -0.0131726, 0, 0, 0.71875, 1, -0.0058905, 0, 0, 0.75, 1, 0, 0, 0)
-tracks/1/type = "position_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Skeleton3D:door_right")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 1.875, 0, 0, 0.0625, 1, 1.88444, 0, 0, 0.09375, 1, 1.88444, 0, 0, 0.125, 1, 1.875, 0, 0, 0.1875, 1, 1.7475, 0, 0, 0.21875, 1, 1.69355, 0, 0, 0.28125, 1, 1.62487, 0, 0, 0.3125, 1, 1.58796, 0, 0, 0.34375, 1, 1.53668, 0, 0, 0.375, 1, 1.45922, 0, 0, 0.40625, 1, 1.3848, 0, 0, 0.4375, 1, 1.35054, 0, 0, 0.46875, 1, 1.33683, 0, 0, 0.53125, 1, 1.31138, 0, 0, 0.5625, 1, 1.30014, 0, 0, 0.625, 1, 1.27913, 0, 0, 0.6875, 1, 1.26317, 0, 0, 0.71875, 1, 1.25589, 0, 0, 0.75, 1, 1.25, 0, 0)
-tracks/2/type = "position_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Skeleton3D:Doors")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.625, 0, -1.56313)
-
-[sub_resource type="Animation" id="Animation_s8ay0"]
-resource_name = "animation_open"
-length = 0.75
-step = 0.03125
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton3D:door_left")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.03125, 1, -0.0188194, 0, 0, 0.0625, 1, -0.04375, 0, 0, 0.09375, 1, -0.0743056, 0, 0, 0.125, 1, -0.11, 0, 0, 0.1875, 1, -0.261875, 0, 0, 0.21875, 1, -0.324398, 0, 0, 0.3125, 1, -0.431343, 0, 0, 0.34375, 1, -0.478477, 0, 0, 0.375, 1, -0.548906, 0, 0, 0.40625, 1, -0.605977, 0, 0, 0.4375, 1, -0.629067, 0, 0, 0.46875, 1, -0.633674, 0, 0, 0.53125, 1, -0.636912, 0, 0, 0.5625, 1, -0.636206, 0, 0, 0.625, 1, -0.632471, 0, 0, 0.6875, 1, -0.627739, 0, 0, 0.71875, 1, -0.625872, 0, 0, 0.75, 1, -0.625, 0, 0)
-tracks/1/type = "position_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Skeleton3D:door_right")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 1.25, 0, 0, 0.03125, 1, 1.26882, 0, 0, 0.0625, 1, 1.29375, 0, 0, 0.09375, 1, 1.32431, 0, 0, 0.125, 1, 1.36, 0, 0, 0.1875, 1, 1.51188, 0, 0, 0.21875, 1, 1.5744, 0, 0, 0.3125, 1, 1.68134, 0, 0, 0.34375, 1, 1.72848, 0, 0, 0.375, 1, 1.79891, 0, 0, 0.40625, 1, 1.85598, 0, 0, 0.4375, 1, 1.87907, 0, 0, 0.46875, 1, 1.88367, 0, 0, 0.53125, 1, 1.88691, 0, 0, 0.5625, 1, 1.88621, 0, 0, 0.625, 1, 1.88247, 0, 0, 0.6875, 1, 1.87774, 0, 0, 0.71875, 1, 1.87587, 0, 0, 0.75, 1, 1.875, 0, 0)
-tracks/2/type = "position_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Skeleton3D:Doors")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.625, 0, -1.5625)
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_2jq2m"]
-_data = {
-&"animation_close": SubResource("Animation_1308y"),
-&"animation_open": SubResource("Animation_s8ay0")
-}
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_0n2le"]
 size = Vector3(0.001, 4, 3)
 
@@ -459,16 +400,8 @@ transform = Transform3D(-3, 0, 4.52987e-07, 0, 0.01, 0, -4.52987e-07, 0, -3, 0, 
 mesh = SubResource("BoxMesh_0n2le")
 skeleton = NodePath("../..")
 
-[node name="ElevatorDoorAnimator" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_2jq2m")
-}
-movie_quit_on_finish = true
-script = ExtResource("2_0n2le")
-
-[node name="elevator_btns" parent="." instance=ExtResource("3_0n2le")]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1, 0.65, -1.37)
+[node name="elevator_btns" parent="." instance=ExtResource("3_406cw")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1.12632, 0.65, -1.37)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

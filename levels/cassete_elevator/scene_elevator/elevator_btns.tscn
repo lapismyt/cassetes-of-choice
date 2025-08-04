@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=4 uid="uid://b7x7rmgwk0hyl"]
+[gd_scene load_steps=33 format=4 uid="uid://b7x7rmgwk0hyl"]
 
 [ext_resource type="Texture2D" uid="uid://6lwgwm10fiyw" path="res://models/elevator_buttons_0.png" id="1_on6ub"]
 [ext_resource type="Script" uid="uid://bsxturfe8os2a" path="res://levels/cassete_elevator/scene_elevator/elevator_button_interact.gd" id="2_on6ub"]
 [ext_resource type="Script" uid="uid://dbj3v2pl5i2y1" path="res://levels/cassete_elevator/scene_elevator/elevator_buttons/button_0.gd" id="2_xct58"]
+[ext_resource type="Script" uid="uid://b17r0n1ell2m" path="res://levels/cassete_elevator/scene_elevator/elevator_buttons/button_1.gd" id="3_oos6e"]
 [ext_resource type="Script" uid="uid://bagcmnid3ky80" path="res://levels/cassete_elevator/scene_elevator/elevator_sound_player.gd" id="4_lojjv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nix0"]
@@ -686,7 +687,7 @@ libraries = {
 
 [node name="button_1" type="Area3D" parent="Node/elevator_buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.5625, 0)
-script = ExtResource("2_on6ub")
+script = ExtResource("3_oos6e")
 interaction_cooldown = 1200
 
 [node name="button_1_mesh" type="MeshInstance3D" parent="Node/elevator_buttons/button_1"]

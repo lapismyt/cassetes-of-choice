@@ -1,10 +1,8 @@
-[gd_scene load_steps=37 format=4 uid="uid://cycggbcll3ur1"]
+[gd_scene load_steps=35 format=4 uid="uid://twg5bfc6xe8t"]
 
-[ext_resource type="Texture2D" uid="uid://sx2nqhfdc08p" path="res://models/player_0.png" id="1_eiwnc"]
-[ext_resource type="Script" uid="uid://cxt4ffw5woafu" path="res://base/scripts/player.gd" id="1_obxd5"]
-[ext_resource type="Script" uid="uid://dggq65skvthjp" path="res://base/scripts/player_model.gd" id="2_0d6eq"]
-[ext_resource type="Script" uid="uid://c7ayvd48bbm0e" path="res://levels/cassete_elevator/scene_elevator/animation_player.gd" id="2_obxd5"]
-[ext_resource type="Script" uid="uid://bp3xnv2r7w53c" path="res://base/scripts/player_music_manager.gd" id="5_d0w1b"]
+[ext_resource type="Script" uid="uid://cbcksvta127hx" path="res://levels/cassete_elevator/mirror_station/shadow_player.gd" id="1_oksth"]
+[ext_resource type="Script" uid="uid://dggq65skvthjp" path="res://base/scripts/player_model.gd" id="2_4broe"]
+[ext_resource type="Texture2D" uid="uid://sx2nqhfdc08p" path="res://models/player_0.png" id="3_6e45f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mvdw"]
 resource_name = "material_0"
@@ -12,7 +10,9 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("1_eiwnc")
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("3_6e45f")
 texture_filter = 0
 texture_repeat = false
 
@@ -842,17 +842,17 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iyo7h"]
-radius = 0.276383
+radius = 0.3
 height = 1.8
 
-[node name="Player" type="CharacterBody3D"]
+[node name="ShadowPlayer" type="CharacterBody3D"]
 collision_layer = 2
 platform_floor_layers = 4294967043
 platform_wall_layers = 3
-script = ExtResource("1_obxd5")
+script = ExtResource("1_oksth")
 
 [node name="blockbench_export" type="Node3D" parent="."]
-script = ExtResource("2_0d6eq")
+script = ExtResource("2_4broe")
 
 [node name="Node" type="Node3D" parent="blockbench_export"]
 
@@ -878,13 +878,11 @@ skeleton = NodePath("")
 
 [node name="head" type="MeshInstance3D" parent="blockbench_export/Node/root/waist/body2/head2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-visible = false
 mesh = SubResource("ArrayMesh_yqyht")
 skeleton = NodePath("")
 
 [node name="hat" type="MeshInstance3D" parent="blockbench_export/Node/root/waist/body2/head2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-visible = false
 mesh = SubResource("ArrayMesh_2m6yg")
 skeleton = NodePath("")
 
@@ -960,30 +958,8 @@ skeleton = NodePath("")
 libraries = {
 &"": SubResource("AnimationLibrary_s1t6a")
 }
-script = ExtResource("2_obxd5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.929689, 0)
 shape = SubResource("CapsuleShape3D_iyo7h")
 debug_color = Color(0.921569, 0, 0.690196, 0.145098)
-
-[node name="fpCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -0.106)
-doppler_tracking = 2
-
-[node name="SpotLight3D" type="SpotLight3D" parent="fpCamera"]
-transform = Transform3D(0.998973, -0.0438647, 0.011391, 0.0437382, 0.998981, 0.0111288, -0.0118675, -0.0106191, 0.999873, 0.0115891, -0.00774705, 0.00167601)
-light_color = Color(0.99, 0.99, 0.9108, 1)
-light_energy = 0.23
-light_indirect_energy = 5.824
-light_volumetric_fog_energy = 12.783
-light_size = 0.808
-light_specular = 0.189
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_angle = 37.2174
-spot_angle_attenuation = 2.0
-
-[node name="MusicManager" type="Node3D" parent="."]
-script = ExtResource("5_d0w1b")

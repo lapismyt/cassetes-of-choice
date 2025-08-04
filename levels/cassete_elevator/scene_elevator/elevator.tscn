@@ -1,15 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj488rjfy17jt"]
+[gd_scene load_steps=8 format=3 uid="uid://dj488rjfy17jt"]
 
 [ext_resource type="PackedScene" uid="uid://cycggbcll3ur1" path="res://base/player.tscn" id="1_1s7mg"]
 [ext_resource type="Script" uid="uid://dpsnwc1ij5jcw" path="res://levels/cassete_elevator/scene_elevator/elevator_scene_manager.gd" id="1_jog2q"]
 [ext_resource type="PackedScene" uid="uid://dxfmcno3dxx3h" path="res://base/vhs_layer.tscn" id="2_2vcwo"]
-[ext_resource type="PackedScene" uid="uid://bdfdphueco6mt" path="res://levels/cassete_elevator/scene_elevator/elevator_model.tscn" id="4_pfpvq"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_iyo7h"]
-size = Vector3(0.03, 0.1, 0.03)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jog2q"]
-size = Vector3(0.030957, 0.00214844, 0.0306335)
+[ext_resource type="PackedScene" uid="uid://bdfdphueco6mt" path="res://levels/cassete_elevator/mirror_station/elevator_model.tscn" id="4_pfpvq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5s0of"]
 region_merge_size = 31.05
@@ -48,20 +42,6 @@ spot_angle = 57.24
 spot_angle_attenuation = 9.84915
 
 [node name="Player" parent="." instance=ExtResource("1_1s7mg")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-
-[node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
-collision_mask = 2
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0.00894859, 0.774658, 0.00834229)
-mesh = SubResource("BoxMesh_iyo7h")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="floor"]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0.0351596, 0.692581, 0.018002)
-shape = SubResource("BoxShape3D_jog2q")
-debug_color = Color(0, 0.6, 0.701961, 0.14902)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_5s0of")
