@@ -23,6 +23,7 @@ signal resumed
 signal crouch_start(player: PlayerBody)
 signal crouch_stop(player: PlayerBody)
 signal debug_mode_toggled(debug_mode: bool)
+signal doors_closed
 
 static var instance: SignalBus
 

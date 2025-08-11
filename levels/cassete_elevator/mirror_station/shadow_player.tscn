@@ -842,7 +842,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iyo7h"]
-radius = 0.3
+radius = 0.4
 height = 1.8
 
 [node name="ShadowPlayer" type="CharacterBody3D"]

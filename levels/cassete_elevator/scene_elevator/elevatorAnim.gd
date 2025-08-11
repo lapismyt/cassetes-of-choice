@@ -1,4 +1,8 @@
+class_name ElevatorAnim
 extends AnimationPlayer
+
+var closing_doors: bool = false
+var doors_opened: bool = true
 
 
 func _ready():
@@ -20,6 +24,7 @@ func open_doors() -> void:
 	if not DataStoreElevator.elevator_open:
 		play("animation_close", -1, -1, true)
 		DataStoreElevator.elevator_open = true
+		doors_opened = true
 
 
 func close_doors() -> void:
@@ -27,3 +32,11 @@ func close_doors() -> void:
 	if DataStoreElevator.elevator_open:
 		play("animation_close")
 		DataStoreElevator.elevator_open = false
+		closing_doors = true
+		doors_opened = false
+
+
+func _process(delta):
+	if closing_doors and not is_playing():
+		closing_doors = false
+		SignalBus.doors_closed.emit()
