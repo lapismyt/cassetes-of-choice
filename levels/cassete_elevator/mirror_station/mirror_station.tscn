@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://fbhyd8gngwkq"]
+[gd_scene load_steps=10 format=3 uid="uid://fbhyd8gngwkq"]
 
 [ext_resource type="PackedScene" uid="uid://dq866yh0wbsas" path="res://levels/cassete_elevator/elevator_model_mirror.tscn" id="1_1devg"]
 [ext_resource type="PackedScene" uid="uid://twg5bfc6xe8t" path="res://levels/cassete_elevator/mirror_station/shadow_player.tscn" id="2_2x6ka"]
@@ -14,6 +14,18 @@ size = Vector3(0.14499, 2, 0.8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6y2mg"]
 size = Vector3(0.030957, 0.001, 0.0306335)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c186w"]
+size = Vector3(1.4, 2.2, 0.001)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm581"]
+transparency = 1
+albedo_color = Color(0.631373, 0.631373, 0.631373, 0.0745098)
+roughness = 0.12
+refraction_scale = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r7whw"]
+material = SubResource("StandardMaterial3D_mm581")
 
 [node name="MirrorStation" type="Node3D"]
 
@@ -55,6 +67,10 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0.0351596, -0.0383057, 
 shape = SubResource("BoxShape3D_6y2mg")
 debug_color = Color(0, 0.6, 0.701961, 0.14902)
 
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.2831e-08, 1, -1.4005)
+shape = SubResource("BoxShape3D_c186w")
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.22454, 3.47092, -4.2)
 light_color = Color(1, 0.998667, 0.92, 1)
@@ -71,3 +87,7 @@ light_energy = 6.655
 spot_range = 7.0
 spot_angle = 62.6617
 spot_angle_attenuation = 9.84915
+
+[node name="glass" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.695344, 0, 0, 0, -1.86145e-07, -1.09956, 0, 4.2585, -4.80633e-08, 0, 1.06278, -1.57242)
+mesh = SubResource("PlaneMesh_r7whw")
