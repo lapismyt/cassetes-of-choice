@@ -20,9 +20,10 @@ size = Vector3(1.4, 2.2, 0.001)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm581"]
 transparency = 1
-albedo_color = Color(0.631373, 0.631373, 0.631373, 0.0745098)
-roughness = 0.12
+albedo_color = Color(0.483711, 0.601302, 0.673645, 0.164706)
+roughness = 0.0
 refraction_scale = 1.0
+proximity_fade_distance = 0.01
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r7whw"]
 material = SubResource("StandardMaterial3D_mm581")
@@ -71,6 +72,11 @@ debug_color = Color(0, 0.6, 0.701961, 0.14902)
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.2831e-08, 1, -1.4005)
 shape = SubResource("BoxShape3D_c186w")
 
+[node name="glass" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-0.695344, 3.7229e-07, -4.20183e-15, 0, -1.86145e-07, -1.09956, -6.07889e-08, -4.2585, 4.80633e-08, 1.24803e-07, 1.06278, -1.42758)
+mesh = SubResource("PlaneMesh_r7whw")
+skeleton = NodePath("../..")
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.22454, 3.47092, -4.2)
 light_color = Color(1, 0.998667, 0.92, 1)
@@ -87,7 +93,3 @@ light_energy = 6.655
 spot_range = 7.0
 spot_angle = 62.6617
 spot_angle_attenuation = 9.84915
-
-[node name="glass" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.695344, 0, 0, 0, -1.86145e-07, -1.09956, 0, 4.2585, -4.80633e-08, 0, 1.06278, -1.57242)
-mesh = SubResource("PlaneMesh_r7whw")
