@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ddw6o4pknoipc"]
+
+[ext_resource type="Shader" uid="uid://dbto6thfe4yux" path="res://base/noise_shader.gdshader" id="1_gf1ph"]
+
+[resource]
+shader = ExtResource("1_gf1ph")
+shader_parameter/noise_amount = 0.5050000239875
+shader_parameter/noise_scale = 150.0
+shader_parameter/noise_color = Color(0.078431375, 0, 0.07058824, 1)

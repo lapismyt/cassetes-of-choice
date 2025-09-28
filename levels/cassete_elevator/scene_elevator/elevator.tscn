@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj488rjfy17jt"]
+[gd_scene load_steps=12 format=3 uid="uid://dj488rjfy17jt"]
 
 [ext_resource type="PackedScene" uid="uid://cycggbcll3ur1" path="res://base/player.tscn" id="1_1s7mg"]
 [ext_resource type="Script" uid="uid://dpsnwc1ij5jcw" path="res://levels/cassete_elevator/scene_elevator/elevator_scene_manager.gd" id="1_jog2q"]
 [ext_resource type="PackedScene" uid="uid://dxfmcno3dxx3h" path="res://base/vhs_layer.tscn" id="2_2vcwo"]
+[ext_resource type="Material" uid="uid://cuxpu1y012fpk" path="res://vhs.tres" id="4_521p3"]
 [ext_resource type="PackedScene" uid="uid://bdfdphueco6mt" path="res://levels/cassete_elevator/mirror_station/elevator_model.tscn" id="4_pfpvq"]
+[ext_resource type="ArrayMesh" uid="uid://dm53yx643syi" path="res://models/cuboid.res" id="5_jey5l"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5s0of"]
 region_merge_size = 31.05
@@ -20,6 +22,17 @@ dof_blur_far_distance = 40.17
 dof_blur_far_transition = 40.9
 dof_blur_near_distance = 0.87
 dof_blur_near_transition = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_521p3"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.7411765, 0, 0, 1)
+backlight_enabled = true
+backlight = Color(18.892157, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ys08n"]
+material = SubResource("StandardMaterial3D_521p3")
+size = Vector3(0.02, 0.02, 0.02)
 
 [node name="ElevatorScene" type="Node3D"]
 script = ExtResource("1_jog2q")
@@ -48,9 +61,18 @@ navigation_mesh = SubResource("NavigationMesh_5s0of")
 navigation_layers = 7
 
 [node name="VHSLayer" parent="." instance=ExtResource("2_2vcwo")]
+material = ExtResource("4_521p3")
 
 [node name="elevator_model" parent="." instance=ExtResource("4_pfpvq")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_auhqe")
 camera_attributes = SubResource("CameraAttributesPractical_1s7mg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.0491359, 0.133817, -0.8489422, 0.34499994, 1.1431535, 0.5728759, 0.8274596, -0.6462917, 0.83751976, -1.2713006, 3.7371256, 1.3726234)
+mesh = ExtResource("5_jey5l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1.0000001, -6.2584877e-07, 1.4901161e-07, -1.7881393e-07, 0.99999934, 0, 1.7881393e-07, 4.4703484e-07, 0.99999964, -0.0056390762, 0.06458378, -0.07717395)
+mesh = SubResource("BoxMesh_ys08n")

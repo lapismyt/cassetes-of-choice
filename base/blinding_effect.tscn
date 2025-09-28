@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2spamb0478ah"]
+
+[ext_resource type="Script" uid="uid://wb6je6p16rf1" path="res://base/scripts/blinding_effect.gd" id="1_xg4bq"]
+[ext_resource type="Material" uid="uid://ddw6o4pknoipc" path="res://base/noise_shader.tres" id="2_loy7e"]
+
+[node name="BlindingEffect" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_xg4bq")
+
+[node name="BaseColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 1, 1, 0)
+
+[node name="NoiseColorRect" type="ColorRect" parent="."]
+material = ExtResource("2_loy7e")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
